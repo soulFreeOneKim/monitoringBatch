@@ -11,35 +11,45 @@ from logInfoGenerator import Generator
 from assemblyOrder import AssemblyOrder
 from detector import Detector
 
+# functions --------------------------------------------------------------------------------------------- #
+
 def getFileName(filepath):
     path_element = filepath.split("\\")
     return path_element[-1]
 
+def filteringPath(file_path, app_dv_cd_list):
+    app_dv_cd_list = [val.lower() for val in app_dv_cd_list]
+    filteredPathList = [string for string in file_path if any(sub in string for sub in app_dv_cd_list)]
+    logging.info(f"[monitoring.py - filteringPath] : filteredPathList : {filteredPathList}")
+    return filteredPathList
+    
+# ------------------------------------------------------------------------------------------------------- #
+
 
 logging.basicConfig(format='%(asctime)s --- %(message)s', level=logging.INFO)
 
-file_absolute_path  = os.path.abspath(__file__)
-root_dir            = os.path.dirname(file_absolute_path)
-config_dir          = os.path.join(root_dir,"config")
-log_dir             = os.path.join(root_dir,"logs")
-ini_file_nm         = "fileInfo.ini"
+FILE_ABSOLUTE_PATH  = os.path.abspath(__file__)
+ROOT_DIR            = os.path.dirname(FILE_ABSOLUTE_PATH)
+CONFIG_DIR          = os.path.join(ROOT_DIR,"config")
+LOG_DIR             = os.path.join(ROOT_DIR,"logs")
+INI_FILE_NM         = "fileInfo.ini"
 
 
-logging.info(f"absolute_file_path : {file_absolute_path}")
-logging.info(f"### root_dir : {root_dir}")
-logging.info(f"config_dir : {config_dir}")
-logging.info(f"log_dir : {log_dir}")
+logging.info(f"absolute_file_path : {FILE_ABSOLUTE_PATH}")
+logging.info(f"### ROOT_DIR : {ROOT_DIR}")
+logging.info(f"CONFIG_DIR : {CONFIG_DIR}")
+logging.info(f"LOG_DIR : {LOG_DIR}")
 
 
 
 # ini 파일 파싱
 config = configparser.ConfigParser()
-config.read(f"{config_dir}\{ini_file_nm}")
+config.read(f"{CONFIG_DIR}\{INI_FILE_NM}")
 
-target_log_str          = ""
-target_log_list         = []
-target_log_file_path    = []
-target_log_dict         = {}
+target_log_str                  = ""
+target_app_dv_cd_list           = []
+target_log_file_path            = []
+target_log_dict                 = {}
 
 # 로그 분석 대상 경로 및 정보 만들기
 for section in config.sections():
@@ -48,17 +58,17 @@ for section in config.sections():
             if key == 'target':
                 target_log_str = config[section][key] 
 
-target_log_list = target_log_str.split(",")
-logging.info(f"target_log_list : {target_log_list}")
+
+# VGW, VSA, VDT, VRS
+target_app_dv_cd_list = target_log_str.split(",")
+
 
 # app 별 로그 경로 확인
-for app in target_log_list:
+for app in target_app_dv_cd_list:
     print(f"app : {app}")
     app_path_list = config[app + '.' +"PATH"]['PATH'].split('|')
     for value in app_path_list:
         target_log_file_path.append(value)      
-
-logging.info(f"target_log_file_path : {target_log_file_path}")
 
 # 테스트
 input_check_date = ""
@@ -72,23 +82,33 @@ if input_check_date != "":
 else :
     target_log_file_path = [item for item in target_log_file_path if 'YYYYMMDD' not in item]
 
+# 경로 필터 후, 로그 추출
+for path in filteringPath(target_log_file_path, target_app_dv_cd_list):
 
-for path in target_log_file_path:
+    log_file_name   = getFileName(LOG_DIR + path)
+    path_info       = path.split('\\')
+    app_dv_cd       = path_info[1].upper()
+    log_host_nm     = path_info[2].upper()
 
-    log_file_name       = getFileName(log_dir + path)
+    if len(path_info) == 5:
+        center_dv_cd = path_info[3].upper()
+    else:
+        center_dv_cd = "NO"      
 
-    scanner = LogScanner(log_dir + path, log_file_name)
+    logging.info(f"log_file_name    : {log_file_name}")
+    logging.info(f"path_info        : {path_info}")
+    logging.info(f"app_dv_cd        : {app_dv_cd}")
+    logging.info(f"log_host_nm      : {log_host_nm}")
+    logging.info(f"center_dv_cd     : {center_dv_cd}")
+
+
+    scanner = LogScanner(LOG_DIR + path, log_file_name)
     scanner.read_lines()
 
-    #assemblyorder = AssemblyOrder("CC","VGW")
-    assemblyorder = AssemblyOrder("CD","VGW")
-
-    # loginfo = LogInfo("call_center_1.log", "VBSGW01P", "CC", "VGW")
-    loginfo = LogInfo(log_file_name, "VGW", "VBSGW01P", "CD")
-
-    generator = Generator(scanner.READ_LINE_LIST, assemblyorder.PATTERN_DICT, loginfo)
-
-    detector = Detector(generator.LOGINFO)
+    assemblyorder   = AssemblyOrder(center_dv_cd, app_dv_cd)
+    loginfo         = LogInfo(log_file_name, app_dv_cd, log_host_nm, center_dv_cd)
+    generator       = Generator(scanner.READ_LINE_LIST, assemblyorder.PATTERN_DICT, loginfo)
+    detector        = Detector(generator.LOGINFO)
 
     print(detector.DF)
 

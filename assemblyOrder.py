@@ -17,15 +17,20 @@ class AssemblyOrder:
     def patternMaker(self):
         pt_dict = {}
 
-        if self.CASE_NM == "CC_VGW" or self.CASE_NM == "CD_VGW":
+        if self.CASE_NM == "CC_VGW" or self.CASE_NM == "DC_VGW":
             pt_dict['TIME'] = r'\[.*?\]'
             pt_dict['SOURCE_LINE'] = r'\(\s+\d+\)'
             pt_dict['LEVEL'] = r'INFO|ERROR'
-            pt_dict['DETAIL_TXT'] = r' - .+'
+            pt_dict['DETAIL_TXT'] = r'- (.*)'
             self.PATTERN_DICT = pt_dict
-            
-        elif self.CASE_NM == "CC_ADT" or self.CASE_NM == "CD_ADT" :
-            pass
+            # if "VSA" in sample_string or "VRS" in sample_string or "VDT" in sample_string:
+
+        elif "VSA" in self.CASE_NM  or "VRS" in self.CASE_NM  or "VDT" in self.CASE_NM :
+            pt_dict['TIME'] = r'(\d{2}:\d{2}:\d{2}\.\d{3})'
+            pt_dict['LEVEL'] = r'\[\s*(INFO|ERROR|DEBUG)\s*\]'
+            pt_dict['DETAIL_TXT'] = r'- (.*)'
+            self.PATTERN_DICT = pt_dict            
+          
         else:
             pass
 
