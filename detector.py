@@ -13,7 +13,6 @@ class Detector:
         self.LOGINFO = LoginfoObj
         self.DF      = pd.DataFrame()
         self.COLUMN_SEQUENCE = self.LOGINFO.COLUMN_SEQUENCE
-        self.LOG_FILE_NAME   = getattr(self.LOGINFO, "INPUT_FILE_NM")
         
         self.makeDataFrame()
     
@@ -32,7 +31,7 @@ class Detector:
 
     def loadCsv(self):
         logging.info(f"[detector.py - loadCsv]")
-        self.DF.to_csv(f"{RESULT_DIR}\\{self.LOG_FILE_NAME}.csv", index=False)
+        self.DF.to_csv(f"{RESULT_DIR}\\{self.LOGINFO.APP_DV_CD}_{self.LOGINFO.LOG_HOST_NM}_{self.LOGINFO.INPUT_FILE_NM}.csv", index=False)
         
 
 

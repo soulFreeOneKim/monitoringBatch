@@ -17,11 +17,21 @@ class Generator:
             self.LOGINFO.LOG_LINE.append(idx+1)
             for key, value in self.PATTERN_DICT.items():
                 attr = key                
-                search = re.search(value, line)
+                match = re.search(value, line)
+                try:
+                    result = match.group()
+                except AttributeError:
+                    logging.info(f"INPUT_FILE_NM    : {self.LOGINFO.INPUT_FILE_NM}")
+                    logging.info(f"INPUT_FILE_PATH  : {self.LOGINFO.INPUT_FILE_PATH}")
+                    logging.info(f"idx      : {idx}")
+                    logging.info(f"line     : {line}")
+                    logging.info(f"key      : {key}")
+                    logging.info(f"value    : {value}")
+                    continue
                 if hasattr(self.LOGINFO, attr):
                     attribute_value = getattr(self.LOGINFO, attr)
-                    attribute_value.append(search.group())        
-                    line = line.replace(search.group(), "", 1)
+                    attribute_value.append(match.group())        
+                    line = line.replace(match.group(), "", 1)
 
 if __name__ == "__main__":    
     print(1)

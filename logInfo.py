@@ -14,11 +14,9 @@ class LogInfo:
     SOURCE_LINE         : List[str] = field(default_factory=list)     
     LEVEL               : List[str] = field(default_factory=list) 
     DETAIL_TXT          : List[str] = field(default_factory=list)     
-    CALL_ID             : List[str] = field(default_factory=list) 
-    ERROR_YN            : List[str] = field(default_factory=list)    
 
     def __post_init__(self):
-        self.COLUMN_SEQUENCE = ['LOG_LINE', 'TIME', 'SOURCE_LINE', 'LEVEL', 'DETAIL_TXT','CALL_ID','ERROR_YN']
+        self.COLUMN_SEQUENCE = ['LOG_LINE', 'TIME', 'SOURCE_LINE', 'LEVEL', 'DETAIL_TXT']
     
 
 if __name__ == "__main__":    

@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import re
 import os
 import sys
 from dataclasses import dataclass
@@ -11,14 +12,49 @@ from typing import List
 @dataclass
 class LogScanner:
 
-    TARGET_LOG_FILE_DIR     : str 
-    TARGET_LOG_FILE         : str
-    ENDCODING               : str = "UTF-8"
-    READ_LINE_LIST          : List[str] = field(default_factory=list)    
+    TARGET_LOG_FILE_PATH     : str 
+    TARGET_LOG_FILE          : str
+    ENDCODING                : str = "UTF-8"
+    READ_LINE_LIST           : List[str] = field(default_factory=list)
+    PATTERN                  : str
+
+    def __post_init__(self):
+        if self.PATTERN == "":
+            if  ub
+            self.CASE_NM = self.CENTER_DV_CD + "_" + self.APP_DV_CD        
 
     def read_lines(self) -> None:
         
-        f = open(self.TARGET_LOG_FILE_DIR,"r",encoding=self.ENDCODING)
+        f = open(self.TARGET_LOG_FILE_PATH,"r",encoding=self.ENDCODING)
 
-        self.READ_LINE_LIST = f.readlines()        
+        lines = f.readlines()
+
+        adjusted_lines = []
+        buffer = ""
+
+        for line in lines:
+
+            stripped_line = line.strip()
+            
+            # [INFO ] 태그가 있는 경우
+            if "[INFO ]" in stripped_line:
+                # 버퍼에 내용이 있으면 adjusted_lines에 추가
+                if buffer:
+                    adjusted_lines.append(buffer)
+                    buffer = ""
+                buffer += stripped_line
+            else:
+                # 태그가 없는 경우 버퍼에 라인 추가
+                buffer += stripped_line
+
+        # 마지막 버퍼 내용 추가
+        if buffer:
+            adjusted_lines.append(buffer)
+
+        for line in adjusted_lines:
+            print(line)
+
+        # self.READ_LINE_LIST = f.readlines()        
+
+
         f.close()
