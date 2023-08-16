@@ -7,7 +7,7 @@ import logging
 import re
 from logScanner import LogScanner
 from logInfo import LogInfo
-from logInfoGenerator import Generator
+from generator import Generator
 from assemblyOrder import AssemblyOrder
 from detector import Detector
 
