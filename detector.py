@@ -28,14 +28,14 @@ class Detector:
     # error 검출 rule
     # ------------------------------------------------------------------------------------------------------- #
     def errorExtractor(self):
-        logging.info(f"[detector.py - errorExtractor] self.LOGINFO.INPUT_FILE_NM : {self.LOGINFO.INPUT_FILE_NM}")
-        logging.info(f"[detector.py - errorExtractor] processing ..")
+        logging.info(f"[detector.py] 오류 검출 로직 시작")
+        logging.info(f"[detector.py] 오류 검출 로직 종료")
 
     # ------------------------------------------------------------------------------------------------------- #
     # dataframe csv 로 저장(필요시 사용)
     # ------------------------------------------------------------------------------------------------------- #
     def loadCsv(self):
-        logging.info(f"[detector.py - loadCsv]")
+        logging.info(f"[detector.py] CSV 결과 저장")
         self.DF.to_csv(f"{RESULT_DIR}\\{self.LOGINFO.APP_DV_CD}_{self.LOGINFO.LOG_HOST_NM}_{self.LOGINFO.INPUT_FILE_NM}.csv", index=False)
         
 

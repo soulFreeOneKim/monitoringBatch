@@ -19,12 +19,6 @@ class LogScanner:
     PATTERN_DICT             : dict = field(default_factory=dict)
     READ_LINE_LIST           : List[str] = field(default_factory=list)
     
-
-    # def __post_init__(self):
-    #     if self.PATTERN == "":
-    #         if  ub
-    #         self.CASE_NM = self.CENTER_DV_CD + "_" + self.APP_DV_CD        
-
     def read_lines(self) -> None:
         
         f = open(self.TARGET_LOG_FILE_PATH,"r",encoding=self.ENDCODING)
@@ -44,9 +38,6 @@ class LogScanner:
                 try:
                     result = match.group()
                 except AttributeError:
-                    # logging.info(f"stripped_line    : {stripped_line}")
-                    # logging.info(f"key              : {key}")
-                    # logging.info(f"value            : {value}")
                     result = ""
             
             # 패턴이 매칭 되는 경우
@@ -63,12 +54,6 @@ class LogScanner:
         # 마지막 버퍼 내용 추가
         if buffer:
             adjusted_lines.append(buffer)
-
-        # # 체크용 로그
-        # for idx , val in enumerate(adjusted_lines): 
-        #     logging.info(f"adjusted_lines[{idx}] length : {len(val)}") 
-        #     if len(val) > 2000:
-        #         logging.info(f"adjusted_lines[{idx}] value : {val}")        
 
         self.READ_LINE_LIST = adjusted_lines      
 

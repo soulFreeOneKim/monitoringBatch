@@ -9,8 +9,6 @@ class Generator:
         self.READ_FILE_LIST = read_file_list
         self.PATTERN_DICT = pattern_dict
         self.LOGINFO      = LogInfo
-        self.generate()    
-        
 
     def generate(self):
         for idx, line in enumerate(self.READ_FILE_LIST):

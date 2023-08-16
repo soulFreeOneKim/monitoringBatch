@@ -24,7 +24,7 @@ def getFileName(filepath):
 def filteringPath(file_path, app_dv_cd_list):
     app_dv_cd_list = [val.lower() for val in app_dv_cd_list]
     filteredPathList = [string for string in file_path if any(sub in string for sub in app_dv_cd_list)]
-    logging.info(f"[monitoring.py - filteringPath] : filteredPathList : {filteredPathList}")
+    logging.info(f"[monitoring.py] : filteredPathList : {filteredPathList}")
     return filteredPathList
     
 
@@ -35,10 +35,10 @@ LOG_DIR             = os.path.join(ROOT_DIR,"logs")
 INPUT_CHECK_DATE    = ""
 INI_FILE_NM         = "fileInfo.ini"
 
-logging.info(f"FILE_ABSOLUTE_PATH   : {FILE_ABSOLUTE_PATH}")
-logging.info(f"ROOT_DIR             : {ROOT_DIR}")
-logging.info(f"CONFIG_DIR           : {CONFIG_DIR}")
-logging.info(f"LOG_DIR              : {LOG_DIR}")
+logging.info(f"[monitoring.py] FILE_ABSOLUTE_PATH   : {FILE_ABSOLUTE_PATH}")
+logging.info(f"[monitoring.py] ROOT_DIR             : {ROOT_DIR}")
+logging.info(f"[monitoring.py] CONFIG_DIR           : {CONFIG_DIR}")
+logging.info(f"[monitoring.py] LOG_DIR              : {LOG_DIR}")
 
 # ------------------------------------------------------------------------------------------------------- #
 # ini 파일 파싱 ------------------------------------------------------------------------------------------ #
@@ -83,7 +83,7 @@ for app in target_app_dv_cd_list:
 # ------------------------------------------------------------------------------------------------------- #
 # 특정일자 로그 조회시
 # ------------------------------------------------------------------------------------------------------- #
-logging.info(f"INPUT_CHECK_DATE : {INPUT_CHECK_DATE}")
+logging.info(f"[monitoring.py] INPUT_CHECK_DATE : {INPUT_CHECK_DATE}")
 
 if INPUT_CHECK_DATE != "":
     target_log_file_path = [item for item in target_log_file_path if 'YYYYMMDD' in item]
@@ -112,11 +112,11 @@ for path in filteringPath(target_log_file_path, target_app_dv_cd_list):
     # 센터별로 로그 다르게 쌓이는 경우에 한해..
     if len(path_info) == 5 : center_dv_cd = path_info[3].upper()
         
-    logging.info(f"log_file_name    : {log_file_name}")
-    logging.info(f"path_info        : {path_info}")
-    logging.info(f"app_dv_cd        : {app_dv_cd}")
-    logging.info(f"log_host_nm      : {log_host_nm}")
-    logging.info(f"center_dv_cd     : {center_dv_cd}")
+    logging.info(f"[monitoring.py] log_file_name    : {log_file_name}")
+    logging.info(f"[monitoring.py] path_info        : {path_info}")
+    logging.info(f"[monitoring.py] app_dv_cd        : {app_dv_cd}")
+    logging.info(f"[monitoring.py] log_host_nm      : {log_host_nm}")
+    logging.info(f"[monitoring.py] center_dv_cd     : {center_dv_cd}")
 
     assemblyorder   = AssemblyOrder(center_dv_cd, app_dv_cd)
 
@@ -124,10 +124,13 @@ for path in filteringPath(target_log_file_path, target_app_dv_cd_list):
     logscanner.read_lines()
 
     loginfo         = LogInfo(log_file_name, log_file_path, app_dv_cd, log_host_nm, center_dv_cd)
+
     generator       = Generator(logscanner.READ_LINE_LIST, assemblyorder.PATTERN_DICT, loginfo)
+    generator.generate()
+    
     detector        = Detector(generator.LOGINFO)
 
-    logging.info(f"detector.DF : {detector.DF}")
+    logging.info(f"[monitoring.py] detector.DF : {detector.DF}")
 
     detector.errorExtractor()
     detector.loadCsv()
