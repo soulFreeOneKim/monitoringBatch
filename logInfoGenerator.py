@@ -21,12 +21,6 @@ class Generator:
                 try:
                     result = match.group()
                 except AttributeError:
-                    logging.info(f"INPUT_FILE_NM    : {self.LOGINFO.INPUT_FILE_NM}")
-                    logging.info(f"INPUT_FILE_PATH  : {self.LOGINFO.INPUT_FILE_PATH}")
-                    logging.info(f"idx      : {idx}")
-                    logging.info(f"line     : {line}")
-                    logging.info(f"key      : {key}")
-                    logging.info(f"value    : {value}")
                     continue
                 if hasattr(self.LOGINFO, attr):
                     attribute_value = getattr(self.LOGINFO, attr)

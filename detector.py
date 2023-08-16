@@ -24,11 +24,16 @@ class Detector:
         
         self.DF = self.DF[self.COLUMN_SEQUENCE]        
 
+    # ------------------------------------------------------------------------------------------------------- #
     # error 검출 rule
+    # ------------------------------------------------------------------------------------------------------- #
     def errorExtractor(self):
         logging.info(f"[detector.py - errorExtractor] self.LOGINFO.INPUT_FILE_NM : {self.LOGINFO.INPUT_FILE_NM}")
         logging.info(f"[detector.py - errorExtractor] processing ..")
 
+    # ------------------------------------------------------------------------------------------------------- #
+    # dataframe csv 로 저장(필요시 사용)
+    # ------------------------------------------------------------------------------------------------------- #
     def loadCsv(self):
         logging.info(f"[detector.py - loadCsv]")
         self.DF.to_csv(f"{RESULT_DIR}\\{self.LOGINFO.APP_DV_CD}_{self.LOGINFO.LOG_HOST_NM}_{self.LOGINFO.INPUT_FILE_NM}.csv", index=False)

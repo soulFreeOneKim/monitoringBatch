@@ -39,8 +39,6 @@ if __name__ == "__main__":
     assor = AssemblyOrder("CC","VGW")
     print(assor.__str__())
     
-    # "","type","detail",['r"\[[^\]]*\]"']
-
 
 
         

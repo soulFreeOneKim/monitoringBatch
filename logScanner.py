@@ -3,6 +3,7 @@ import pandas as pd
 import re
 import os
 import sys
+import logging
 from dataclasses import dataclass
 from dataclasses import dataclass, field, asdict, astuple, make_dataclass
 from typing import List
@@ -15,13 +16,14 @@ class LogScanner:
     TARGET_LOG_FILE_PATH     : str 
     TARGET_LOG_FILE          : str
     ENDCODING                : str = "UTF-8"
+    PATTERN_DICT             : dict = field(default_factory=dict)
     READ_LINE_LIST           : List[str] = field(default_factory=list)
-    PATTERN                  : str
+    
 
-    def __post_init__(self):
-        if self.PATTERN == "":
-            if  ub
-            self.CASE_NM = self.CENTER_DV_CD + "_" + self.APP_DV_CD        
+    # def __post_init__(self):
+    #     if self.PATTERN == "":
+    #         if  ub
+    #         self.CASE_NM = self.CENTER_DV_CD + "_" + self.APP_DV_CD        
 
     def read_lines(self) -> None:
         
@@ -35,9 +37,20 @@ class LogScanner:
         for line in lines:
 
             stripped_line = line.strip()
+
+            for key, value in self.PATTERN_DICT.items():
+                attr = key                
+                match = re.search(value, stripped_line)
+                try:
+                    result = match.group()
+                except AttributeError:
+                    # logging.info(f"stripped_line    : {stripped_line}")
+                    # logging.info(f"key              : {key}")
+                    # logging.info(f"value            : {value}")
+                    result = ""
             
-            # [INFO ] 태그가 있는 경우
-            if "[INFO ]" in stripped_line:
+            # 패턴이 매칭 되는 경우
+            if result:
                 # 버퍼에 내용이 있으면 adjusted_lines에 추가
                 if buffer:
                     adjusted_lines.append(buffer)
@@ -51,10 +64,12 @@ class LogScanner:
         if buffer:
             adjusted_lines.append(buffer)
 
-        for line in adjusted_lines:
-            print(line)
+        # # 체크용 로그
+        # for idx , val in enumerate(adjusted_lines): 
+        #     logging.info(f"adjusted_lines[{idx}] length : {len(val)}") 
+        #     if len(val) > 2000:
+        #         logging.info(f"adjusted_lines[{idx}] value : {val}")        
 
-        # self.READ_LINE_LIST = f.readlines()        
-
+        self.READ_LINE_LIST = adjusted_lines      
 
         f.close()
