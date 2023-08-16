@@ -85,15 +85,16 @@ else :
 # 경로 필터 후, 로그 추출
 for path in filteringPath(target_log_file_path, target_app_dv_cd_list):
 
-    log_file_name   = getFileName(LOG_DIR + path)
+    log_file_path   = LOG_DIR + path
+    log_file_name   = getFileName(log_file_path)
     path_info       = path.split('\\')
     app_dv_cd       = path_info[1].upper()
     log_host_nm     = path_info[2].upper()
 
-    if len(path_info) == 5:
-        center_dv_cd = path_info[3].upper()
-    else:
-        center_dv_cd = "NO"      
+    center_dv_cd = "COMMON"      
+
+    if len(path_info) == 5 : center_dv_cd = path_info[3].upper()
+        
 
     logging.info(f"log_file_name    : {log_file_name}")
     logging.info(f"path_info        : {path_info}")
@@ -106,7 +107,7 @@ for path in filteringPath(target_log_file_path, target_app_dv_cd_list):
     scanner.read_lines()
 
     assemblyorder   = AssemblyOrder(center_dv_cd, app_dv_cd)
-    loginfo         = LogInfo(log_file_name, app_dv_cd, log_host_nm, center_dv_cd)
+    loginfo         = LogInfo(log_file_name, log_file_path, app_dv_cd, log_host_nm, center_dv_cd)
     generator       = Generator(scanner.READ_LINE_LIST, assemblyorder.PATTERN_DICT, loginfo)
     detector        = Detector(generator.LOGINFO)
 
