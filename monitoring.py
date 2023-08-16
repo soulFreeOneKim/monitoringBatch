@@ -110,8 +110,7 @@ for path in filteringPath(target_log_file_path, target_app_dv_cd_list):
     generator       = Generator(scanner.READ_LINE_LIST, assemblyorder.PATTERN_DICT, loginfo)
     detector        = Detector(generator.LOGINFO)
 
-    print(detector.DF)
+    logging.info(f"detector.DF : {detector.DF}")
 
     detector.errorExtractor()
-
     detector.loadCsv()
