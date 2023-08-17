@@ -129,8 +129,6 @@ for path in filteringPath(target_log_file_path, target_app_dv_cd_list):
     generator.generate()
     
     detector        = Detector(generator.LOGINFO)
-
     logging.info(f"[monitoring.py] detector.DF : {detector.DF}")
-
     detector.errorExtractor()
     detector.loadCsv()
