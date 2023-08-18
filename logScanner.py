@@ -21,7 +21,7 @@ class LogScanner:
     
     def read_lines(self) -> None:
         
-        f = open(self.TARGET_LOG_FILE_PATH,"r",encoding=self.ENDCODING)
+        f = open(f"{self.TARGET_LOG_FILE_PATH}{self.TARGET_LOG_FILE}","r",encoding=self.ENDCODING)
 
         lines = f.readlines()
 

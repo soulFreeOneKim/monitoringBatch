@@ -13,12 +13,11 @@ from assemblyOrder import AssemblyOrder
 from detector import Detector
 from logfile import LogFile
 
-logging.basicConfig(format='%(asctime)s --- %(message)s', level=logging.INFO)
+logging.basicConfig(format='%(asctime)s ---> %(message)s', level=logging.INFO)
 
 # ------------------------------------------------------------------------------------------------------- #
 # 함수 정의  --------------------------------------------------------------------------------------------- #
 # ------------------------------------------------------------------------------------------------------- #
-
 def getFileName(filepath):
     path_element = filepath.split("\\")
     return path_element[-1]
@@ -30,10 +29,8 @@ def filteringPath(file_path, app_dv_cd_list):
     return filteredPathList
 
 def makeLogFileObject(log_file_section_str_list: list):
-
     # 프로젝트 디렉토리 다운로드 경로 설정
     download_local_path_list = []
-
     for str_val in log_file_section_str_list:
         for section in config.sections():
             str_val_split = str_val.split(".")
@@ -41,7 +38,7 @@ def makeLogFileObject(log_file_section_str_list: list):
                 for key in config[section]:
                     if key == ENV_INFO.lower(): 
                         download_local_path_list.extend(config[section][key].split("|"))
- 
+    # 로그 파일 객체 생성
     logfile_object_list = []
     for section in config.sections():
         for file_info in log_file_section_str_list:
@@ -145,6 +142,7 @@ LOG_DIR             = os.path.join(ROOT_DIR,"logs")
 INPUT_CHECK_DATE    = ""
 INI_FILE_NM         = "fileInfo.ini"
 ENV_INFO            = ""
+IS_LOCAL            = ""
 
 logging.info(f"[monitoring.py] FILE_ABSOLUTE_PATH   : {FILE_ABSOLUTE_PATH}")
 logging.info(f"[monitoring.py] ROOT_DIR             : {ROOT_DIR}")
@@ -177,13 +175,12 @@ for section in config.sections():
         for key in config[section]:
             if key == 'env' : ENV_INFO = config[section][key]
             if key == 'date': INPUT_CHECK_DATE = config[section][key]
-
+            if key == 'is_local' : IS_LOCAL = config[section][key]
 
 # ------------------------------------------------------------------------------------------------------- #
 # INI 파일의 TARGET(로그 분석 대상 APP 구분) 추출
 # ------------------------------------------------------------------------------------------------------- #
 target_app_dv_cd_list = target_log_str.split("|")
-
 
 # ------------------------------------------------------------------------------------------------------- #
 # 다운로드 대상  로그 파일 처리
@@ -194,51 +191,25 @@ log_file_object_list        =   []
 for app_dv_cd_val in target_app_dv_cd_list:
     log_file_section_str_list.append(f"{app_dv_cd_val}.{ENV_INFO}.LOGFILE")
 
-if ENV_INFO != 'LOCAL':
-    logging.info(f"log_file_section_str_list : {log_file_section_str_list}")
-    log_file_object_list = makeLogFileObject(log_file_section_str_list)
+logging.info(f"log_file_section_str_list : {log_file_section_str_list}")
+log_file_object_list = makeLogFileObject(log_file_section_str_list)
 
 # ------------------------------------------------------------------------------------------------------- #
-# SFTP 접속 후 대상 로그 download
+# SFTP 접속 후 대상 로그 download - local 제외
 # ------------------------------------------------------------------------------------------------------- #
-if ENV_INFO != 'LOCAL':
+if IS_LOCAL != 'Y':
     download_logfile(log_file_object_list)
 
-sys.exit()
-
 # ------------------------------------------------------------------------------------------------------- #
-# app 별 로그 경로 확인
+# 분석대상 로그파일 객체에 대해서 처리
 # ------------------------------------------------------------------------------------------------------- #
-for app in target_app_dv_cd_list:
-    app_path_list = config[app + '.' +"PATH"]['PATH'].split('|')
-    for value in app_path_list:
-        target_log_file_path.append(value)      
-
-# ------------------------------------------------------------------------------------------------------- #
-# 특정일자 로그 조회시
-# ------------------------------------------------------------------------------------------------------- #
-logging.info(f"[monitoring.py] INPUT_CHECK_DATE : {INPUT_CHECK_DATE}")
-
-if INPUT_CHECK_DATE != "":
-    target_log_file_path = [item for item in target_log_file_path if 'YYYYMMDD' in item]
-    target_log_file_path = [item.replace("YYYYMMDD", INPUT_CHECK_DATE) for item in target_log_file_path]
-
-# ------------------------------------------------------------------------------------------------------- #
-# 현재일자 로그 조회시
-# ------------------------------------------------------------------------------------------------------- #
-else :
-    target_log_file_path = [item for item in target_log_file_path if 'YYYYMMDD' not in item]
-
-# ------------------------------------------------------------------------------------------------------- #
-# 경로 필터링 후 로그 처리
-# ------------------------------------------------------------------------------------------------------- #
-for path in filteringPath(target_log_file_path, target_app_dv_cd_list):
-
-    log_file_path   = LOG_DIR + path
-    log_file_name   = getFileName(log_file_path)
-    path_info       = path.split('\\')
-    app_dv_cd       = path_info[1].upper()
-    log_host_nm     = path_info[2].upper()
+for obj in log_file_object_list:
+    
+    log_file_path   = LOG_DIR + obj.DOWNLOAD_PATH
+    log_file_name   = obj.LOG_FILE_NAME
+    path_info       = obj.DOWNLOAD_PATH.split('\\')
+    app_dv_cd       = obj.APP_DV_CD
+    log_host_nm     = obj.SERVER_HOST_NAME
 
     # 센터 구분 필요없는 경우 default
     center_dv_cd = "COMMON"      
@@ -254,7 +225,7 @@ for path in filteringPath(target_log_file_path, target_app_dv_cd_list):
 
     assemblyorder   = AssemblyOrder(center_dv_cd, app_dv_cd)
 
-    logscanner      = LogScanner(LOG_DIR + path, log_file_name, "UTF-8", assemblyorder.PATTERN_DICT)
+    logscanner      = LogScanner(log_file_path, log_file_name, "UTF-8", assemblyorder.PATTERN_DICT)
     logscanner.read_lines()
 
     loginfo         = LogInfo(log_file_name, log_file_path, app_dv_cd, log_host_nm, center_dv_cd)

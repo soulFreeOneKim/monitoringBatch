@@ -17,7 +17,7 @@ class AssemblyOrder:
     def patternMaker(self):
         pt_dict = {}
 
-        if self.CASE_NM == "CC_VGW" or self.CASE_NM == "DC_VGW":
+        if self.CASE_NM == "CALL-CENTER_VGW" or self.CASE_NM == "DIRECT-CENTER_VGW":
             pt_dict['TIME'] = r'\[.*?\]'
             pt_dict['SOURCE_LINE'] = r'\(\s+\d+\)'
             pt_dict['LEVEL'] = r'INFO|ERROR'
