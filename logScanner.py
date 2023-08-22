@@ -20,7 +20,7 @@ class LogScanner:
     READ_LINE_LIST           : List[str] = field(default_factory=list)
     
     def read_lines(self) -> None:
-        
+        logging.info(f"[logScanner] Target File : {self.TARGET_LOG_FILE_PATH}{self.TARGET_LOG_FILE}")
         f = open(f"{self.TARGET_LOG_FILE_PATH}{self.TARGET_LOG_FILE}","r",encoding=self.ENDCODING)
 
         lines = f.readlines()
