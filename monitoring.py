@@ -130,8 +130,9 @@ def download_logfile(log_file_object_list: list):
 
             # sftp 종료
             sftp.close()
+
         except paramiko.SSHException as e:
-            logging.info(f"SSH error occurred: {e}")
+            logging.info(f"[monitoring.py] SSH error occurred: {e}")
 
 # ------------------------------------------------------------------------------------------------------- #
 
@@ -154,7 +155,7 @@ logging.info(f"[monitoring.py] LOG_DIR              : {LOG_DIR}")
 # ------------------------------------------------------------------------------------------------------- #
 # config = configparser.ConfigParser()
 config = configparser.ConfigParser(inline_comment_prefixes=(';')) # 주석은 ; 로
-config.read(f"{CONFIG_DIR}\{INI_FILE_NM}")
+config.read(f"{CONFIG_DIR}/{INI_FILE_NM}")
 
 # ------------------------------------------------------------------------------------------------------- #
 # 변수 선언
@@ -181,7 +182,7 @@ for section in config.sections():
 # INI 파일의 TARGET(로그 분석 대상 APP 구분) 추출
 # ------------------------------------------------------------------------------------------------------- #
 target_app_dv_cd_list = target_log_str.split("|")
-
+logging.info(f"[monitoring.py] target_app_dv_cd_list : {target_app_dv_cd_list}")
 # ------------------------------------------------------------------------------------------------------- #
 # 다운로드 대상  로그 파일 처리
 # ------------------------------------------------------------------------------------------------------- #
@@ -191,8 +192,9 @@ log_file_object_list        =   []
 for app_dv_cd_val in target_app_dv_cd_list:
     log_file_section_str_list.append(f"{app_dv_cd_val}.{ENV_INFO}.LOGFILE")
 
-logging.info(f"log_file_section_str_list : {log_file_section_str_list}")
+logging.info(f"[monitoring.py] log_file_section_str_list : {log_file_section_str_list}")
 log_file_object_list = makeLogFileObject(log_file_section_str_list)
+logging.info(f"[monitoring.py] log_file_object_list : {log_file_object_list}")
 
 # ------------------------------------------------------------------------------------------------------- #
 # SFTP 접속 후 대상 로그 download - local 제외
@@ -207,7 +209,7 @@ for obj in log_file_object_list:
     
     log_file_path   = LOG_DIR + obj.DOWNLOAD_PATH
     log_file_name   = obj.LOG_FILE_NAME
-    path_info       = obj.DOWNLOAD_PATH.split('\\')
+    path_info       = obj.DOWNLOAD_PATH.split('/')
     app_dv_cd       = obj.APP_DV_CD
     log_host_nm     = obj.SERVER_HOST_NAME
 
