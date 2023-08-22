@@ -1,0 +1,154 @@
+[2023-01-30 10:48:57,703] ( 555) INFO - esl connection: 1, connected
+[2023-01-30 10:48:57,723] (  22) INFO - DB URL: mysql+asyncmy://root:msl1234~@10.32.12.240:3306/kyobo
+[2023-01-30 10:48:57,789] ( 333) INFO - (60f4b41c) login: {'id': 'cube', 'result': 1, 'pwd': 'cube123', 'fname': 'login'}
+[2023-01-30 10:48:57,789] ( 292) INFO - extension: {'EXT_DN': '6667', 'AGENT_ID': '70067', 'SVC_ID': 'direct4', 'CAMP_ID': '30', 'SERVICE': '완판모니터링'}
+[2023-01-30 10:48:57,789] ( 294) INFO - PDS addmonitor: {"fname": "addmonitor", "device": "6667"}
+[2023-01-30 10:48:57,796] ( 436) INFO - (399486e0) login: {'id': 'cube', 'result': 1, 'pwd': 'cube123', 'fname': 'login'}
+[2023-01-30 10:48:57,796] ( 395) INFO - extension: {'EXT_DN': '6658', 'AGENT_ID': '70058', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-01-30 10:48:57,796] ( 397) INFO - CTI addmonitor: {"fname": "addmonitor", "device": "6658"}
+[2023-01-30 10:48:58,289] ( 342) INFO - (60f4b41c) addmonitor: {'result': 1, 'device': '6667', 'fname': 'addmonitor'}
+[2023-01-30 10:48:58,290] ( 300) INFO - PDS logoff: {"fname": "logoff", "this": "6667", "agent": {"id": "70067", "group": "400", "reason": "0"}}
+[2023-01-30 10:48:58,297] ( 445) INFO - (399486e0) addmonitor: {'result': 1, 'device': '6658', 'fname': 'addmonitor'}
+[2023-01-30 10:48:58,297] ( 403) INFO - CTI logoff: {"fname": "logoff", "this": "6658", "agent": {"id": "70058", "group": "400", "reason": "0"}}
+[2023-01-30 10:48:58,792] ( 339) INFO - (60f4b41c) logoff: {'result': 1115, 'agent': {'id': '70067', 'reason': '0', 'group': '400'}, 'this': '6667', 'fname': 'logoff'}
+[2023-01-30 10:48:58,792] ( 305) INFO - PDS logon: {"fname": "logon", "this": "6667", "agent": {"id": "70067", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-01-30 10:48:58,798] ( 442) INFO - (399486e0) logoff: {'result': 2018, 'agent': {'id': '70058', 'reason': '0', 'group': '400'}, 'this': '6658', 'fname': 'logoff'}
+[2023-01-30 10:48:58,799] ( 408) INFO - CTI logon: {"fname": "logon", "this": "6658", "agent": {"id": "70058", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-01-30 10:48:59,294] ( 336) INFO - (60f4b41c) logon: {'result': 1, 'agent': {'id': '70067', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6667', 'fname': 'logon'}
+[2023-01-30 10:48:59,294] ( 292) INFO - extension: {'EXT_DN': '6670', 'AGENT_ID': '70070', 'SVC_ID': 'direct2', 'CAMP_ID': '80', 'SERVICE': '23연체'}
+[2023-01-30 10:48:59,294] ( 294) INFO - PDS addmonitor: {"fname": "addmonitor", "device": "6670"}
+[2023-01-30 10:48:59,300] ( 439) INFO - (399486e0) logon: {'result': 2018, 'agent': {'id': '70058', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6658', 'fname': 'logon'}
+[2023-01-30 10:48:59,301] ( 395) INFO - extension: {'EXT_DN': '6659', 'AGENT_ID': '70059', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-01-30 10:48:59,301] ( 397) INFO - CTI addmonitor: {"fname": "addmonitor", "device": "6659"}
+[2023-01-30 10:48:59,795] ( 342) INFO - (60f4b41c) addmonitor: {'result': 1, 'device': '6670', 'fname': 'addmonitor'}
+[2023-01-30 10:48:59,796] ( 300) INFO - PDS logoff: {"fname": "logoff", "this": "6670", "agent": {"id": "70070", "group": "400", "reason": "0"}}
+[2023-01-30 10:48:59,802] ( 445) INFO - (399486e0) addmonitor: {'result': 1, 'device': '6659', 'fname': 'addmonitor'}
+[2023-01-30 10:48:59,803] ( 403) INFO - CTI logoff: {"fname": "logoff", "this": "6659", "agent": {"id": "70059", "group": "400", "reason": "0"}}
+[2023-01-30 10:49:00,297] ( 339) INFO - (60f4b41c) logoff: {'result': 1115, 'agent': {'id': '70070', 'reason': '0', 'group': '400'}, 'this': '6670', 'fname': 'logoff'}
+[2023-01-30 10:49:00,297] ( 305) INFO - PDS logon: {"fname": "logon", "this": "6670", "agent": {"id": "70070", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-01-30 10:49:00,304] ( 442) INFO - (399486e0) logoff: {'result': 2018, 'agent': {'id': '70059', 'reason': '0', 'group': '400'}, 'this': '6659', 'fname': 'logoff'}
+[2023-01-30 10:49:00,304] ( 408) INFO - CTI logon: {"fname": "logon", "this": "6659", "agent": {"id": "70059", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-01-30 10:49:00,800] ( 336) INFO - (60f4b41c) logon: {'result': 1, 'agent': {'id': '70070', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6670', 'fname': 'logon'}
+[2023-01-30 10:49:00,800] ( 354) INFO - (60f4b41c) event: 6670 201
+[2023-01-30 10:49:00,800] ( 354) INFO - (60f4b41c) event: 6670 204
+[2023-01-30 10:49:00,805] ( 439) INFO - (399486e0) logon: {'result': 2018, 'agent': {'id': '70059', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6659', 'fname': 'logon'}
+[2023-01-30 10:49:00,806] ( 395) INFO - extension: {'EXT_DN': '6660', 'AGENT_ID': '70060', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-01-30 10:49:00,806] ( 397) INFO - CTI addmonitor: {"fname": "addmonitor", "device": "6660"}
+[2023-01-30 10:49:01,307] ( 445) INFO - (399486e0) addmonitor: {'result': 1, 'device': '6660', 'fname': 'addmonitor'}
+[2023-01-30 10:49:01,307] ( 403) INFO - CTI logoff: {"fname": "logoff", "this": "6660", "agent": {"id": "70060", "group": "400", "reason": "0"}}
+[2023-01-30 10:49:01,808] ( 442) INFO - (399486e0) logoff: {'result': 2018, 'agent': {'id': '70060', 'reason': '0', 'group': '400'}, 'this': '6660', 'fname': 'logoff'}
+[2023-01-30 10:49:01,809] ( 408) INFO - CTI logon: {"fname": "logon", "this": "6660", "agent": {"id": "70060", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-01-30 10:49:02,310] ( 439) INFO - (399486e0) logon: {'result': 2018, 'agent': {'id': '70060', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6660', 'fname': 'logon'}
+[2023-01-30 10:49:02,310] ( 395) INFO - extension: {'EXT_DN': '6661', 'AGENT_ID': '70061', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-01-30 10:49:02,311] ( 397) INFO - CTI addmonitor: {"fname": "addmonitor", "device": "6661"}
+[2023-01-30 10:49:02,812] ( 445) INFO - (399486e0) addmonitor: {'result': 1, 'device': '6661', 'fname': 'addmonitor'}
+[2023-01-30 10:49:02,813] ( 403) INFO - CTI logoff: {"fname": "logoff", "this": "6661", "agent": {"id": "70061", "group": "400", "reason": "0"}}
+[2023-01-30 10:49:03,314] ( 442) INFO - (399486e0) logoff: {'result': 2018, 'agent': {'id': '70061', 'reason': '0', 'group': '400'}, 'this': '6661', 'fname': 'logoff'}
+[2023-01-30 10:49:03,314] ( 408) INFO - CTI logon: {"fname": "logon", "this": "6661", "agent": {"id": "70061", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-01-30 10:49:03,815] ( 439) INFO - (399486e0) logon: {'result': 2018, 'agent': {'id': '70061', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6661', 'fname': 'logon'}
+[2023-01-30 10:49:03,815] ( 395) INFO - extension: {'EXT_DN': '6662', 'AGENT_ID': '70062', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-01-30 10:49:03,816] ( 397) INFO - CTI addmonitor: {"fname": "addmonitor", "device": "6662"}
+[2023-01-30 10:49:04,317] ( 445) INFO - (399486e0) addmonitor: {'result': 1, 'device': '6662', 'fname': 'addmonitor'}
+[2023-01-30 10:49:04,317] ( 403) INFO - CTI logoff: {"fname": "logoff", "this": "6662", "agent": {"id": "70062", "group": "400", "reason": "0"}}
+[2023-01-30 10:49:04,819] ( 442) INFO - (399486e0) logoff: {'result': 2018, 'agent': {'id': '70062', 'reason': '0', 'group': '400'}, 'this': '6662', 'fname': 'logoff'}
+[2023-01-30 10:49:04,819] ( 408) INFO - CTI logon: {"fname": "logon", "this": "6662", "agent": {"id": "70062", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-01-30 10:49:05,321] ( 439) INFO - (399486e0) logon: {'result': 2018, 'agent': {'id': '70062', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6662', 'fname': 'logon'}
+[2023-01-30 10:49:05,322] ( 395) INFO - extension: {'EXT_DN': '6663', 'AGENT_ID': '70063', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-01-30 10:49:05,322] ( 397) INFO - CTI addmonitor: {"fname": "addmonitor", "device": "6663"}
+[2023-01-30 10:49:05,824] ( 445) INFO - (399486e0) addmonitor: {'result': 1, 'device': '6663', 'fname': 'addmonitor'}
+[2023-01-30 10:49:05,824] ( 403) INFO - CTI logoff: {"fname": "logoff", "this": "6663", "agent": {"id": "70063", "group": "400", "reason": "0"}}
+[2023-01-30 10:49:06,326] ( 442) INFO - (399486e0) logoff: {'result': 2018, 'agent': {'id': '70063', 'reason': '0', 'group': '400'}, 'this': '6663', 'fname': 'logoff'}
+[2023-01-30 10:49:06,326] ( 408) INFO - CTI logon: {"fname": "logon", "this": "6663", "agent": {"id": "70063", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-01-30 10:49:06,828] ( 439) INFO - (399486e0) logon: {'result': 2018, 'agent': {'id': '70063', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6663', 'fname': 'logon'}
+[2023-01-30 10:49:06,828] ( 395) INFO - extension: {'EXT_DN': '6664', 'AGENT_ID': '70064', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-01-30 10:49:06,828] ( 397) INFO - CTI addmonitor: {"fname": "addmonitor", "device": "6664"}
+[2023-01-30 10:49:07,330] ( 445) INFO - (399486e0) addmonitor: {'result': 1, 'device': '6664', 'fname': 'addmonitor'}
+[2023-01-30 10:49:07,330] ( 403) INFO - CTI logoff: {"fname": "logoff", "this": "6664", "agent": {"id": "70064", "group": "400", "reason": "0"}}
+[2023-01-30 10:49:07,831] ( 442) INFO - (399486e0) logoff: {'result': 2018, 'agent': {'id': '70064', 'reason': '0', 'group': '400'}, 'this': '6664', 'fname': 'logoff'}
+[2023-01-30 10:49:07,832] ( 408) INFO - CTI logon: {"fname": "logon", "this": "6664", "agent": {"id": "70064", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-01-30 10:49:08,333] ( 439) INFO - (399486e0) logon: {'result': 2018, 'agent': {'id': '70064', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6664', 'fname': 'logon'}
+[2023-01-30 10:49:08,333] ( 395) INFO - extension: {'EXT_DN': '6669', 'AGENT_ID': '70069', 'SVC_ID': 'direct3', 'CAMP_ID': '70', 'SERVICE': '고객동의'}
+[2023-01-30 10:49:08,333] ( 397) INFO - CTI addmonitor: {"fname": "addmonitor", "device": "6669"}
+[2023-01-30 10:49:08,835] ( 445) INFO - (399486e0) addmonitor: {'result': 1, 'device': '6669', 'fname': 'addmonitor'}
+[2023-01-30 10:49:08,835] ( 403) INFO - CTI logoff: {"fname": "logoff", "this": "6669", "agent": {"id": "70069", "group": "400", "reason": "0"}}
+[2023-01-30 10:49:09,336] ( 442) INFO - (399486e0) logoff: {'result': 2018, 'agent': {'id': '70069', 'reason': '0', 'group': '400'}, 'this': '6669', 'fname': 'logoff'}
+[2023-01-30 10:49:09,337] ( 408) INFO - CTI logon: {"fname": "logon", "this": "6669", "agent": {"id": "70069", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-01-30 10:49:09,838] ( 439) INFO - (399486e0) logon: {'result': 2018, 'agent': {'id': '70069', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6669', 'fname': 'logon'}
+[2023-01-30 18:46:12,472] ( 555) INFO - esl connection: 1, connected
+[2023-01-30 18:46:12,474] (  22) INFO - DB URL: mysql+asyncmy://root:msl1234~@10.32.12.240:3306/kyobo
+[2023-01-30 18:46:12,527] ( 436) INFO - (d427efa8) login: {'id': 'cube', 'result': 1, 'pwd': 'cube123', 'fname': 'login'}
+[2023-01-30 18:46:12,527] ( 395) INFO - extension: {'EXT_DN': '6658', 'AGENT_ID': '70058', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-01-30 18:46:12,528] ( 397) INFO - CTI addmonitor: {"fname": "addmonitor", "device": "6658"}
+[2023-01-30 18:46:12,528] ( 333) INFO - (e570df18) login: {'id': 'cube', 'result': 1, 'pwd': 'cube123', 'fname': 'login'}
+[2023-01-30 18:46:12,528] ( 292) INFO - extension: {'EXT_DN': '6667', 'AGENT_ID': '70067', 'SVC_ID': 'direct4', 'CAMP_ID': '30', 'SERVICE': '완판모니터링'}
+[2023-01-30 18:46:12,528] ( 294) INFO - PDS addmonitor: {"fname": "addmonitor", "device": "6667"}
+[2023-01-30 18:46:13,029] ( 445) INFO - (d427efa8) addmonitor: {'result': 1, 'device': '6658', 'fname': 'addmonitor'}
+[2023-01-30 18:46:13,029] ( 403) INFO - CTI logoff: {"fname": "logoff", "this": "6658", "agent": {"id": "70058", "group": "400", "reason": "0"}}
+[2023-01-30 18:46:13,030] ( 342) INFO - (e570df18) addmonitor: {'result': 1, 'device': '6667', 'fname': 'addmonitor'}
+[2023-01-30 18:46:13,030] ( 300) INFO - PDS logoff: {"fname": "logoff", "this": "6667", "agent": {"id": "70067", "group": "400", "reason": "0"}}
+[2023-01-30 18:46:13,531] ( 442) INFO - (d427efa8) logoff: {'result': 2018, 'agent': {'id': '70058', 'reason': '0', 'group': '400'}, 'this': '6658', 'fname': 'logoff'}
+[2023-01-30 18:46:13,531] ( 408) INFO - CTI logon: {"fname": "logon", "this": "6658", "agent": {"id": "70058", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-01-30 18:46:13,532] ( 339) INFO - (e570df18) logoff: {'result': 1, 'agent': {'id': '70067', 'reason': '0', 'group': '400'}, 'this': '6667', 'fname': 'logoff'}
+[2023-01-30 18:46:13,532] ( 305) INFO - PDS logon: {"fname": "logon", "this": "6667", "agent": {"id": "70067", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-01-30 18:46:14,033] ( 439) INFO - (d427efa8) logon: {'result': 2018, 'agent': {'id': '70058', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6658', 'fname': 'logon'}
+[2023-01-30 18:46:14,034] ( 395) INFO - extension: {'EXT_DN': '6659', 'AGENT_ID': '70059', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-01-30 18:46:14,034] ( 397) INFO - CTI addmonitor: {"fname": "addmonitor", "device": "6659"}
+[2023-01-30 18:46:14,034] ( 336) INFO - (e570df18) logon: {'result': 1, 'agent': {'id': '70067', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6667', 'fname': 'logon'}
+[2023-01-30 18:46:14,035] ( 292) INFO - extension: {'EXT_DN': '6670', 'AGENT_ID': '70070', 'SVC_ID': 'direct2', 'CAMP_ID': '80', 'SERVICE': '23연체'}
+[2023-01-30 18:46:14,035] ( 294) INFO - PDS addmonitor: {"fname": "addmonitor", "device": "6670"}
+[2023-01-30 18:46:14,536] ( 445) INFO - (d427efa8) addmonitor: {'result': 1, 'device': '6659', 'fname': 'addmonitor'}
+[2023-01-30 18:46:14,536] ( 403) INFO - CTI logoff: {"fname": "logoff", "this": "6659", "agent": {"id": "70059", "group": "400", "reason": "0"}}
+[2023-01-30 18:46:14,536] ( 342) INFO - (e570df18) addmonitor: {'result': 1, 'device': '6670', 'fname': 'addmonitor'}
+[2023-01-30 18:46:14,537] ( 300) INFO - PDS logoff: {"fname": "logoff", "this": "6670", "agent": {"id": "70070", "group": "400", "reason": "0"}}
+[2023-01-30 18:46:15,038] ( 442) INFO - (d427efa8) logoff: {'result': 2018, 'agent': {'id': '70059', 'reason': '0', 'group': '400'}, 'this': '6659', 'fname': 'logoff'}
+[2023-01-30 18:46:15,038] ( 408) INFO - CTI logon: {"fname": "logon", "this": "6659", "agent": {"id": "70059", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-01-30 18:46:15,038] ( 339) INFO - (e570df18) logoff: {'result': 1, 'agent': {'id': '70070', 'reason': '0', 'group': '400'}, 'this': '6670', 'fname': 'logoff'}
+[2023-01-30 18:46:15,039] ( 305) INFO - PDS logon: {"fname": "logon", "this": "6670", "agent": {"id": "70070", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-01-30 18:46:15,539] ( 439) INFO - (d427efa8) logon: {'result': 2018, 'agent': {'id': '70059', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6659', 'fname': 'logon'}
+[2023-01-30 18:46:15,540] ( 395) INFO - extension: {'EXT_DN': '6660', 'AGENT_ID': '70060', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-01-30 18:46:15,540] ( 397) INFO - CTI addmonitor: {"fname": "addmonitor", "device": "6660"}
+[2023-01-30 18:46:15,540] ( 336) INFO - (e570df18) logon: {'result': 1, 'agent': {'id': '70070', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6670', 'fname': 'logon'}
+[2023-01-30 18:46:15,541] ( 354) INFO - (e570df18) event: 6670 201
+[2023-01-30 18:46:15,541] ( 354) INFO - (e570df18) event: 6670 204
+[2023-01-30 18:46:16,041] ( 445) INFO - (d427efa8) addmonitor: {'result': 1, 'device': '6660', 'fname': 'addmonitor'}
+[2023-01-30 18:46:16,042] ( 403) INFO - CTI logoff: {"fname": "logoff", "this": "6660", "agent": {"id": "70060", "group": "400", "reason": "0"}}
+[2023-01-30 18:46:16,543] ( 442) INFO - (d427efa8) logoff: {'result': 2018, 'agent': {'id': '70060', 'reason': '0', 'group': '400'}, 'this': '6660', 'fname': 'logoff'}
+[2023-01-30 18:46:16,543] ( 408) INFO - CTI logon: {"fname": "logon", "this": "6660", "agent": {"id": "70060", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-01-30 18:46:17,045] ( 439) INFO - (d427efa8) logon: {'result': 2018, 'agent': {'id': '70060', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6660', 'fname': 'logon'}
+[2023-01-30 18:46:17,045] ( 395) INFO - extension: {'EXT_DN': '6661', 'AGENT_ID': '70061', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-01-30 18:46:17,045] ( 397) INFO - CTI addmonitor: {"fname": "addmonitor", "device": "6661"}
+[2023-01-30 18:46:17,547] ( 445) INFO - (d427efa8) addmonitor: {'result': 1, 'device': '6661', 'fname': 'addmonitor'}
+[2023-01-30 18:46:17,547] ( 403) INFO - CTI logoff: {"fname": "logoff", "this": "6661", "agent": {"id": "70061", "group": "400", "reason": "0"}}
+[2023-01-30 18:46:18,048] ( 442) INFO - (d427efa8) logoff: {'result': 2018, 'agent': {'id': '70061', 'reason': '0', 'group': '400'}, 'this': '6661', 'fname': 'logoff'}
+[2023-01-30 18:46:18,049] ( 408) INFO - CTI logon: {"fname": "logon", "this": "6661", "agent": {"id": "70061", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-01-30 18:46:18,550] ( 439) INFO - (d427efa8) logon: {'result': 2018, 'agent': {'id': '70061', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6661', 'fname': 'logon'}
+[2023-01-30 18:46:18,550] ( 395) INFO - extension: {'EXT_DN': '6662', 'AGENT_ID': '70062', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-01-30 18:46:18,551] ( 397) INFO - CTI addmonitor: {"fname": "addmonitor", "device": "6662"}
+[2023-01-30 18:46:19,053] ( 445) INFO - (d427efa8) addmonitor: {'result': 1, 'device': '6662', 'fname': 'addmonitor'}
+[2023-01-30 18:46:19,053] ( 403) INFO - CTI logoff: {"fname": "logoff", "this": "6662", "agent": {"id": "70062", "group": "400", "reason": "0"}}
+[2023-01-30 18:46:19,555] ( 442) INFO - (d427efa8) logoff: {'result': 2018, 'agent': {'id': '70062', 'reason': '0', 'group': '400'}, 'this': '6662', 'fname': 'logoff'}
+[2023-01-30 18:46:19,555] ( 408) INFO - CTI logon: {"fname": "logon", "this": "6662", "agent": {"id": "70062", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-01-30 18:46:20,056] ( 439) INFO - (d427efa8) logon: {'result': 2018, 'agent': {'id': '70062', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6662', 'fname': 'logon'}
+[2023-01-30 18:46:20,056] ( 395) INFO - extension: {'EXT_DN': '6663', 'AGENT_ID': '70063', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-01-30 18:46:20,057] ( 397) INFO - CTI addmonitor: {"fname": "addmonitor", "device": "6663"}
+[2023-01-30 18:46:20,558] ( 445) INFO - (d427efa8) addmonitor: {'result': 1, 'device': '6663', 'fname': 'addmonitor'}
+[2023-01-30 18:46:20,558] ( 403) INFO - CTI logoff: {"fname": "logoff", "this": "6663", "agent": {"id": "70063", "group": "400", "reason": "0"}}
+[2023-01-30 18:46:21,060] ( 442) INFO - (d427efa8) logoff: {'result': 2018, 'agent': {'id': '70063', 'reason': '0', 'group': '400'}, 'this': '6663', 'fname': 'logoff'}
+[2023-01-30 18:46:21,060] ( 408) INFO - CTI logon: {"fname": "logon", "this": "6663", "agent": {"id": "70063", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-01-30 18:46:21,562] ( 439) INFO - (d427efa8) logon: {'result': 2018, 'agent': {'id': '70063', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6663', 'fname': 'logon'}
+[2023-01-30 18:46:21,562] ( 395) INFO - extension: {'EXT_DN': '6664', 'AGENT_ID': '70064', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-01-30 18:46:21,562] ( 397) INFO - CTI addmonitor: {"fname": "addmonitor", "device": "6664"}
+[2023-01-30 18:46:22,064] ( 445) INFO - (d427efa8) addmonitor: {'result': 1, 'device': '6664', 'fname': 'addmonitor'}
+[2023-01-30 18:46:22,064] ( 403) INFO - CTI logoff: {"fname": "logoff", "this": "6664", "agent": {"id": "70064", "group": "400", "reason": "0"}}
+[2023-01-30 18:46:22,566] ( 442) INFO - (d427efa8) logoff: {'result': 2018, 'agent': {'id': '70064', 'reason': '0', 'group': '400'}, 'this': '6664', 'fname': 'logoff'}
+[2023-01-30 18:46:22,566] ( 408) INFO - CTI logon: {"fname": "logon", "this": "6664", "agent": {"id": "70064", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-01-30 18:46:23,068] ( 439) INFO - (d427efa8) logon: {'result': 2018, 'agent': {'id': '70064', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6664', 'fname': 'logon'}
+[2023-01-30 18:46:23,068] ( 395) INFO - extension: {'EXT_DN': '6669', 'AGENT_ID': '70069', 'SVC_ID': 'direct3', 'CAMP_ID': '70', 'SERVICE': '고객동의'}
+[2023-01-30 18:46:23,068] ( 397) INFO - CTI addmonitor: {"fname": "addmonitor", "device": "6669"}
+[2023-01-30 18:46:23,570] ( 445) INFO - (d427efa8) addmonitor: {'result': 1, 'device': '6669', 'fname': 'addmonitor'}
+[2023-01-30 18:46:23,570] ( 403) INFO - CTI logoff: {"fname": "logoff", "this": "6669", "agent": {"id": "70069", "group": "400", "reason": "0"}}
+[2023-01-30 18:46:24,072] ( 442) INFO - (d427efa8) logoff: {'result': 2018, 'agent': {'id': '70069', 'reason': '0', 'group': '400'}, 'this': '6669', 'fname': 'logoff'}
+[2023-01-30 18:46:24,072] ( 408) INFO - CTI logon: {"fname": "logon", "this": "6669", "agent": {"id": "70069", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-01-30 18:46:24,573] ( 439) INFO - (d427efa8) logon: {'result': 2018, 'agent': {'id': '70069', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6669', 'fname': 'logon'}
+[2023-01-30 19:03:42,022] ( 354) INFO - (e570df18) event: 6667 202
+[2023-01-30 19:03:42,222] ( 354) INFO - (e570df18) event: 6670 202

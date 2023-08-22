@@ -1,0 +1,670 @@
+[2023-04-13 07:16:44,107] ( 562) INFO - esl connection: 1, connected
+[2023-04-13 07:16:44,108] (  22) INFO - DB URL: mysql+asyncmy://root:msl1234~@10.32.12.240:3306/kyobo
+[2023-04-13 07:16:44,170] ( 333) INFO - (72d83a35) login: {'id': 'cube', 'result': 1, 'pwd': 'cube123', 'fname': 'login'}
+[2023-04-13 07:16:44,170] ( 292) INFO - extension: {'EXT_DN': '6670', 'AGENT_ID': '70070', 'SVC_ID': 'direct2', 'CAMP_ID': '80', 'SERVICE': '23연체'}
+[2023-04-13 07:16:44,170] ( 294) INFO - PDS addmonitor: {"fname": "addmonitor", "device": "6670"}
+[2023-04-13 07:16:44,174] ( 443) INFO - (617450e2) login: {'id': 'cube', 'result': 1, 'pwd': 'cube123', 'fname': 'login'}
+[2023-04-13 07:16:44,174] ( 402) INFO - extension: {'EXT_DN': '6658', 'AGENT_ID': '70058', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-04-13 07:16:44,175] ( 404) INFO - CTI addmonitor: {"fname": "addmonitor", "device": "6658"}
+[2023-04-13 07:16:44,671] ( 342) INFO - (72d83a35) addmonitor: {'result': 1, 'device': '6670', 'fname': 'addmonitor'}
+[2023-04-13 07:16:44,672] ( 300) INFO - PDS logoff: {"fname": "logoff", "this": "6670", "agent": {"id": "70070", "group": "400", "reason": "0"}}
+[2023-04-13 07:16:44,676] ( 452) INFO - (617450e2) addmonitor: {'result': 1, 'device': '6658', 'fname': 'addmonitor'}
+[2023-04-13 07:16:44,676] ( 410) INFO - CTI logoff: {"fname": "logoff", "this": "6658", "agent": {"id": "70058", "group": "400", "reason": "0"}}
+[2023-04-13 07:16:45,173] ( 339) INFO - (72d83a35) logoff: {'result': 1, 'agent': {'id': '70070', 'reason': '0', 'group': '400'}, 'this': '6670', 'fname': 'logoff'}
+[2023-04-13 07:16:45,173] ( 305) INFO - PDS logon: {"fname": "logon", "this": "6670", "agent": {"id": "70070", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-04-13 07:16:45,177] ( 449) INFO - (617450e2) logoff: {'result': 2018, 'agent': {'id': '70058', 'reason': '0', 'group': '400'}, 'this': '6658', 'fname': 'logoff'}
+[2023-04-13 07:16:45,177] ( 415) INFO - CTI logon: {"fname": "logon", "this": "6658", "agent": {"id": "70058", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-04-13 07:16:45,675] ( 336) INFO - (72d83a35) logon: {'result': 1, 'agent': {'id': '70070', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6670', 'fname': 'logon'}
+[2023-04-13 07:16:45,679] ( 446) INFO - (617450e2) logon: {'result': 2018, 'agent': {'id': '70058', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6658', 'fname': 'logon'}
+[2023-04-13 07:16:45,679] ( 402) INFO - extension: {'EXT_DN': '6659', 'AGENT_ID': '70059', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-04-13 07:16:45,679] ( 404) INFO - CTI addmonitor: {"fname": "addmonitor", "device": "6659"}
+[2023-04-13 07:16:46,181] ( 452) INFO - (617450e2) addmonitor: {'result': 1, 'device': '6659', 'fname': 'addmonitor'}
+[2023-04-13 07:16:46,182] ( 410) INFO - CTI logoff: {"fname": "logoff", "this": "6659", "agent": {"id": "70059", "group": "400", "reason": "0"}}
+[2023-04-13 07:16:46,683] ( 449) INFO - (617450e2) logoff: {'result': 2018, 'agent': {'id': '70059', 'reason': '0', 'group': '400'}, 'this': '6659', 'fname': 'logoff'}
+[2023-04-13 07:16:46,683] ( 415) INFO - CTI logon: {"fname": "logon", "this": "6659", "agent": {"id": "70059", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-04-13 07:16:47,185] ( 446) INFO - (617450e2) logon: {'result': 2018, 'agent': {'id': '70059', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6659', 'fname': 'logon'}
+[2023-04-13 07:16:47,185] ( 402) INFO - extension: {'EXT_DN': '6660', 'AGENT_ID': '70060', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-04-13 07:16:47,185] ( 404) INFO - CTI addmonitor: {"fname": "addmonitor", "device": "6660"}
+[2023-04-13 07:16:47,687] ( 452) INFO - (617450e2) addmonitor: {'result': 1, 'device': '6660', 'fname': 'addmonitor'}
+[2023-04-13 07:16:47,688] ( 410) INFO - CTI logoff: {"fname": "logoff", "this": "6660", "agent": {"id": "70060", "group": "400", "reason": "0"}}
+[2023-04-13 07:16:48,189] ( 449) INFO - (617450e2) logoff: {'result': 2018, 'agent': {'id': '70060', 'reason': '0', 'group': '400'}, 'this': '6660', 'fname': 'logoff'}
+[2023-04-13 07:16:48,189] ( 415) INFO - CTI logon: {"fname": "logon", "this": "6660", "agent": {"id": "70060", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-04-13 07:16:48,690] ( 446) INFO - (617450e2) logon: {'result': 2018, 'agent': {'id': '70060', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6660', 'fname': 'logon'}
+[2023-04-13 07:16:48,691] ( 402) INFO - extension: {'EXT_DN': '6661', 'AGENT_ID': '70061', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-04-13 07:16:48,691] ( 404) INFO - CTI addmonitor: {"fname": "addmonitor", "device": "6661"}
+[2023-04-13 07:16:49,193] ( 452) INFO - (617450e2) addmonitor: {'result': 1, 'device': '6661', 'fname': 'addmonitor'}
+[2023-04-13 07:16:49,194] ( 410) INFO - CTI logoff: {"fname": "logoff", "this": "6661", "agent": {"id": "70061", "group": "400", "reason": "0"}}
+[2023-04-13 07:16:49,695] ( 449) INFO - (617450e2) logoff: {'result': 2018, 'agent': {'id': '70061', 'reason': '0', 'group': '400'}, 'this': '6661', 'fname': 'logoff'}
+[2023-04-13 07:16:49,696] ( 415) INFO - CTI logon: {"fname": "logon", "this": "6661", "agent": {"id": "70061", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-04-13 07:16:50,197] ( 446) INFO - (617450e2) logon: {'result': 2018, 'agent': {'id': '70061', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6661', 'fname': 'logon'}
+[2023-04-13 07:16:50,197] ( 402) INFO - extension: {'EXT_DN': '6662', 'AGENT_ID': '70062', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-04-13 07:16:50,197] ( 404) INFO - CTI addmonitor: {"fname": "addmonitor", "device": "6662"}
+[2023-04-13 07:16:50,699] ( 452) INFO - (617450e2) addmonitor: {'result': 1, 'device': '6662', 'fname': 'addmonitor'}
+[2023-04-13 07:16:50,700] ( 410) INFO - CTI logoff: {"fname": "logoff", "this": "6662", "agent": {"id": "70062", "group": "400", "reason": "0"}}
+[2023-04-13 07:16:51,201] ( 449) INFO - (617450e2) logoff: {'result': 2018, 'agent': {'id': '70062', 'reason': '0', 'group': '400'}, 'this': '6662', 'fname': 'logoff'}
+[2023-04-13 07:16:51,201] ( 415) INFO - CTI logon: {"fname": "logon", "this": "6662", "agent": {"id": "70062", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-04-13 07:16:51,702] ( 446) INFO - (617450e2) logon: {'result': 2018, 'agent': {'id': '70062', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6662', 'fname': 'logon'}
+[2023-04-13 07:16:51,703] ( 402) INFO - extension: {'EXT_DN': '6663', 'AGENT_ID': '70063', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-04-13 07:16:51,703] ( 404) INFO - CTI addmonitor: {"fname": "addmonitor", "device": "6663"}
+[2023-04-13 07:16:52,205] ( 452) INFO - (617450e2) addmonitor: {'result': 1, 'device': '6663', 'fname': 'addmonitor'}
+[2023-04-13 07:16:52,205] ( 410) INFO - CTI logoff: {"fname": "logoff", "this": "6663", "agent": {"id": "70063", "group": "400", "reason": "0"}}
+[2023-04-13 07:16:52,707] ( 449) INFO - (617450e2) logoff: {'result': 2018, 'agent': {'id': '70063', 'reason': '0', 'group': '400'}, 'this': '6663', 'fname': 'logoff'}
+[2023-04-13 07:16:52,707] ( 415) INFO - CTI logon: {"fname": "logon", "this": "6663", "agent": {"id": "70063", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-04-13 07:16:53,208] ( 446) INFO - (617450e2) logon: {'result': 2018, 'agent': {'id': '70063', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6663', 'fname': 'logon'}
+[2023-04-13 07:16:53,209] ( 402) INFO - extension: {'EXT_DN': '6664', 'AGENT_ID': '70064', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-04-13 07:16:53,209] ( 404) INFO - CTI addmonitor: {"fname": "addmonitor", "device": "6664"}
+[2023-04-13 07:16:53,711] ( 452) INFO - (617450e2) addmonitor: {'result': 1, 'device': '6664', 'fname': 'addmonitor'}
+[2023-04-13 07:16:53,711] ( 410) INFO - CTI logoff: {"fname": "logoff", "this": "6664", "agent": {"id": "70064", "group": "400", "reason": "0"}}
+[2023-04-13 07:16:54,212] ( 449) INFO - (617450e2) logoff: {'result': 2018, 'agent': {'id': '70064', 'reason': '0', 'group': '400'}, 'this': '6664', 'fname': 'logoff'}
+[2023-04-13 07:16:54,213] ( 415) INFO - CTI logon: {"fname": "logon", "this": "6664", "agent": {"id": "70064", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-04-13 07:16:54,714] ( 446) INFO - (617450e2) logon: {'result': 2018, 'agent': {'id': '70064', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6664', 'fname': 'logon'}
+[2023-04-13 07:16:54,714] ( 402) INFO - extension: {'EXT_DN': '6667', 'AGENT_ID': '70067', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-04-13 07:16:54,714] ( 404) INFO - CTI addmonitor: {"fname": "addmonitor", "device": "6667"}
+[2023-04-13 07:16:55,216] ( 452) INFO - (617450e2) addmonitor: {'result': 1, 'device': '6667', 'fname': 'addmonitor'}
+[2023-04-13 07:16:55,216] ( 410) INFO - CTI logoff: {"fname": "logoff", "this": "6667", "agent": {"id": "70067", "group": "400", "reason": "0"}}
+[2023-04-13 07:16:55,718] ( 449) INFO - (617450e2) logoff: {'result': 2018, 'agent': {'id': '70067', 'reason': '0', 'group': '400'}, 'this': '6667', 'fname': 'logoff'}
+[2023-04-13 07:16:55,718] ( 415) INFO - CTI logon: {"fname": "logon", "this": "6667", "agent": {"id": "70067", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-04-13 07:16:56,220] ( 446) INFO - (617450e2) logon: {'result': 2018, 'agent': {'id': '70067', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6667', 'fname': 'logon'}
+[2023-04-13 07:16:56,220] ( 402) INFO - extension: {'EXT_DN': '6669', 'AGENT_ID': '70069', 'SVC_ID': 'direct3', 'CAMP_ID': '70', 'SERVICE': '고객동의'}
+[2023-04-13 07:16:56,221] ( 404) INFO - CTI addmonitor: {"fname": "addmonitor", "device": "6669"}
+[2023-04-13 07:16:56,722] ( 452) INFO - (617450e2) addmonitor: {'result': 1, 'device': '6669', 'fname': 'addmonitor'}
+[2023-04-13 07:16:56,723] ( 410) INFO - CTI logoff: {"fname": "logoff", "this": "6669", "agent": {"id": "70069", "group": "400", "reason": "0"}}
+[2023-04-13 07:16:57,224] ( 449) INFO - (617450e2) logoff: {'result': 2018, 'agent': {'id': '70069', 'reason': '0', 'group': '400'}, 'this': '6669', 'fname': 'logoff'}
+[2023-04-13 07:16:57,225] ( 415) INFO - CTI logon: {"fname": "logon", "this": "6669", "agent": {"id": "70069", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-04-13 07:16:57,726] ( 446) INFO - (617450e2) logon: {'result': 2018, 'agent': {'id': '70069', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6669', 'fname': 'logon'}
+[2023-04-13 11:33:04,275] ( 590) INFO - [3d113091] park() uuid: 3d113091, ani: 2059, dnis: 6658, sip_call_id: b5323e68-15015c66-13c4-55013-2d32ed3-403dabef-2d32ed3, code: direct-center, direction: outbound, callstate: RINGING, call_uuid: 3d113091
+[2023-04-13 11:33:04,275] ( 596) INFO - item: <class 'dict'> {'EXT_DN': '6658', 'AGENT_ID': '70058', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-04-13 11:33:04,304] ( 790) INFO - [3d113091] callstate: EARLY
+[2023-04-13 11:33:04,307] ( 657) INFO - [3d113091] answer() uuid: 3d113091, ani: 2059, dnis: 6658, sip_call_id: b5323e68-15015c66-13c4-55013-2d32ed3-403dabef-2d32ed3, code: direct-center, direction: outbound, callstate: EARLY, call_uuid: 3d113091
+[2023-04-13 11:33:04,308] ( 790) INFO - [3d113091] callstate: ACTIVE
+[2023-04-13 11:33:04,395] ( 464) INFO - (617450e2) CTI event: 6658 4
+[2023-04-13 11:33:04,396] ( 627) INFO - PDS event: Delivered(4 {'id': 4, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '6070', 'cause': 62402580, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '6070', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6658', 'ckind': 0, 'c1': 7684940, 'c2': 0, 'called': '6070'}, 'cnsq': 3, 'msid': 1, 'attach': {'uei': 'bot;02351640230413110001;1;11;02;20230330000345;청약녹취Ⅰ', 'ci': None}, 'tag': 0, 'ftime': '2023041311325701', 'cnid': '3155001788', 'this': '6658', 'fname': 'event'})
+[2023-04-13 11:33:04,396] ( 682) INFO - DONE to create record_key: 02023041366587684940
+[2023-04-13 11:33:04,401] ( 690) INFO - [3d113091] ##### bridge execute #####, sofia/gateway/Kakao/6658 CD202304131132576658|direct1|02351640230413110001|1|11|02|20230330000345|청약녹취Ⅰ|||02023041366587684940|
+[2023-04-13 11:33:04,413] ( 464) INFO - (617450e2) CTI event: 6658 6
+[2023-04-13 11:33:04,413] ( 630) INFO - PDS event: Established(6 {'id': 6, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '2059', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6658', 'ckind': 0, 'c1': 7684940, 'c2': 0, 'called': '6070'}, 'cnsq': 4, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041311325701', 'cnid': '3155001788', 'this': '6658', 'fname': 'event'})
+[2023-04-13 11:33:04,437] ( 790) INFO - [3d113091] callstate: RING_WAIT
+[2023-04-13 11:33:04,439] ( 716) INFO - [935eb9b3] originate() uuid: 935eb9b3, ani: 2059, dnis: 6658, sip_call_id: None, code: direct-center, direction: outbound, callstate: DOWN, call_uuid: 3d113091
+[2023-04-13 11:33:04,440] ( 728) INFO - call created for session '3d113091-bda9-4efd-a9fc-062e339607a5'
+[2023-04-13 11:33:04,477] ( 652) INFO - [935eb9b3] associate session 935eb9b3-faac-4f3a-8eba-8cf57b16b41d with a call 3d113091-bda9-4efd-a9fc-062e339607a5
+[2023-04-13 11:33:04,478] ( 790) INFO - [935eb9b3] callstate: ACTIVE
+[2023-04-13 11:33:04,491] ( 790) INFO - [3d113091] callstate: ACTIVE
+[2023-04-13 11:33:04,587] ( 464) INFO - (617450e2) CTI event: 6658 2
+[2023-04-13 11:33:04,588] ( 632) INFO - PDS event: Conference(2 {'id': 2, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '2059', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 6, 'c3': 0, 'third': '6658', 'ckind': 0, 'c1': 7684941, 'c2': 7684940, 'called': ''}, 'cnsq': 8, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041311325801', 'cnid': '3155001788', 'this': '6658', 'fname': 'event'})
+[2023-04-13 11:33:06,281] ( 464) INFO - (617450e2) CTI event: 6658 253
+[2023-04-13 11:33:06,281] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 11:33:06,282] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;play', 'tag': 0, 'ftime': '2023041311325901', 'cnid': '', 'confirm': 1, 'this': '6658', 'fname': 'event'})
+[2023-04-13 11:33:06,282] ( 883) INFO - [3d113091] 재생 play
+[2023-04-13 11:33:06,282] ( 884) INFO - [3d113091] send_info() with sip call-id(5bde9a82-5446-123c-9d99-6cfe544cca64) 재생
+[2023-04-13 11:33:50,844] ( 590) INFO - [ac67c390] park() uuid: ac67c390, ani: 4511, dnis: 6659, sip_call_id: b54c3788-15015c66-13c4-55013-2d32f01-30be0113-2d32f01, code: direct-center, direction: outbound, callstate: RINGING, call_uuid: ac67c390
+[2023-04-13 11:33:50,845] ( 596) INFO - item: <class 'dict'> {'EXT_DN': '6659', 'AGENT_ID': '70059', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-04-13 11:33:50,896] ( 790) INFO - [ac67c390] callstate: EARLY
+[2023-04-13 11:33:50,899] ( 657) INFO - [ac67c390] answer() uuid: ac67c390, ani: 4511, dnis: 6659, sip_call_id: b54c3788-15015c66-13c4-55013-2d32f01-30be0113-2d32f01, code: direct-center, direction: outbound, callstate: EARLY, call_uuid: ac67c390
+[2023-04-13 11:33:50,900] ( 790) INFO - [ac67c390] callstate: ACTIVE
+[2023-04-13 11:33:50,988] ( 464) INFO - (617450e2) CTI event: 6659 4
+[2023-04-13 11:33:50,989] ( 627) INFO - PDS event: Delivered(4 {'id': 4, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '6070', 'cause': 62402580, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '6070', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6659', 'ckind': 0, 'c1': 7684969, 'c2': 0, 'called': '6070'}, 'cnsq': 3, 'msid': 1, 'attach': {'uei': 'bot;01032547230413110002;1;11;02;20230413112932000004;청약녹취Ⅰ', 'ci': None}, 'tag': 0, 'ftime': '2023041311334401', 'cnid': '3155001798', 'this': '6659', 'fname': 'event'})
+[2023-04-13 11:33:50,989] ( 682) INFO - DONE to create record_key: 02023041366597684969
+[2023-04-13 11:33:50,994] ( 690) INFO - [ac67c390] ##### bridge execute #####, sofia/gateway/Kakao/6659 CD202304131133446659|direct1|01032547230413110002|1|11|02|20230413112932000004|청약녹취Ⅰ|||02023041366597684969|
+[2023-04-13 11:33:50,998] ( 464) INFO - (617450e2) CTI event: 6659 6
+[2023-04-13 11:33:50,998] ( 630) INFO - PDS event: Established(6 {'id': 6, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '4511', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6659', 'ckind': 0, 'c1': 7684969, 'c2': 0, 'called': '6070'}, 'cnsq': 4, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041311334401', 'cnid': '3155001798', 'this': '6659', 'fname': 'event'})
+[2023-04-13 11:33:51,028] ( 790) INFO - [ac67c390] callstate: RING_WAIT
+[2023-04-13 11:33:51,031] ( 716) INFO - [7a29ffaf] originate() uuid: 7a29ffaf, ani: 4511, dnis: 6659, sip_call_id: None, code: direct-center, direction: outbound, callstate: DOWN, call_uuid: ac67c390
+[2023-04-13 11:33:51,031] ( 728) INFO - call created for session 'ac67c390-74bc-4b6a-88cc-94e5cd9f98dd'
+[2023-04-13 11:33:51,069] ( 652) INFO - [7a29ffaf] associate session 7a29ffaf-51fb-46c6-8015-71e934db9fff with a call ac67c390-74bc-4b6a-88cc-94e5cd9f98dd
+[2023-04-13 11:33:51,070] ( 790) INFO - [7a29ffaf] callstate: ACTIVE
+[2023-04-13 11:33:51,083] ( 790) INFO - [ac67c390] callstate: ACTIVE
+[2023-04-13 11:33:51,201] ( 464) INFO - (617450e2) CTI event: 6659 2
+[2023-04-13 11:33:51,201] ( 632) INFO - PDS event: Conference(2 {'id': 2, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '4511', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 6, 'c3': 0, 'third': '6659', 'ckind': 0, 'c1': 7684970, 'c2': 7684969, 'called': ''}, 'cnsq': 8, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041311334401', 'cnid': '3155001798', 'this': '6659', 'fname': 'event'})
+[2023-04-13 11:33:51,927] ( 464) INFO - (617450e2) CTI event: 6659 253
+[2023-04-13 11:33:51,927] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 11:33:51,927] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;play', 'tag': 0, 'ftime': '2023041311334501', 'cnid': '', 'confirm': 1, 'this': '6659', 'fname': 'event'})
+[2023-04-13 11:33:51,927] ( 883) INFO - [ac67c390] 재생 play
+[2023-04-13 11:33:51,927] ( 884) INFO - [ac67c390] send_info() with sip call-id(77a35db4-5446-123c-9d99-6cfe544cca64) 재생
+[2023-04-13 11:36:14,877] ( 464) INFO - (617450e2) CTI event: 6659 253
+[2023-04-13 11:36:14,877] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 11:36:14,877] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;pause', 'tag': 0, 'ftime': '2023041311360801', 'cnid': '', 'confirm': 1, 'this': '6659', 'fname': 'event'})
+[2023-04-13 11:36:14,877] ( 883) INFO - [ac67c390] 일시정지 pause
+[2023-04-13 11:36:14,878] ( 884) INFO - [ac67c390] send_info() with sip call-id(77a35db4-5446-123c-9d99-6cfe544cca64) 일시정지
+[2023-04-13 11:36:30,375] ( 464) INFO - (617450e2) CTI event: 6659 253
+[2023-04-13 11:36:30,376] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 11:36:30,376] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;play', 'tag': 0, 'ftime': '2023041311362301', 'cnid': '', 'confirm': 1, 'this': '6659', 'fname': 'event'})
+[2023-04-13 11:36:30,376] ( 883) INFO - [ac67c390] 재생 play
+[2023-04-13 11:36:30,376] ( 884) INFO - [ac67c390] send_info() with sip call-id(77a35db4-5446-123c-9d99-6cfe544cca64) 재생
+[2023-04-13 11:40:47,058] ( 464) INFO - (617450e2) CTI event: 6659 253
+[2023-04-13 11:40:47,058] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 11:40:47,058] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;pause', 'tag': 0, 'ftime': '2023041311404001', 'cnid': '', 'confirm': 1, 'this': '6659', 'fname': 'event'})
+[2023-04-13 11:40:47,059] ( 883) INFO - [ac67c390] 일시정지 pause
+[2023-04-13 11:40:47,059] ( 884) INFO - [ac67c390] send_info() with sip call-id(77a35db4-5446-123c-9d99-6cfe544cca64) 일시정지
+[2023-04-13 11:40:54,838] ( 464) INFO - (617450e2) CTI event: 6659 253
+[2023-04-13 11:40:54,839] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 11:40:54,839] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;play', 'tag': 0, 'ftime': '2023041311404801', 'cnid': '', 'confirm': 1, 'this': '6659', 'fname': 'event'})
+[2023-04-13 11:40:54,839] ( 883) INFO - [ac67c390] 재생 play
+[2023-04-13 11:40:54,839] ( 884) INFO - [ac67c390] send_info() with sip call-id(77a35db4-5446-123c-9d99-6cfe544cca64) 재생
+[2023-04-13 11:40:59,709] ( 464) INFO - (617450e2) CTI event: 6659 253
+[2023-04-13 11:40:59,710] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 11:40:59,710] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;pause', 'tag': 0, 'ftime': '2023041311405301', 'cnid': '', 'confirm': 1, 'this': '6659', 'fname': 'event'})
+[2023-04-13 11:40:59,710] ( 883) INFO - [ac67c390] 일시정지 pause
+[2023-04-13 11:40:59,710] ( 884) INFO - [ac67c390] send_info() with sip call-id(77a35db4-5446-123c-9d99-6cfe544cca64) 일시정지
+[2023-04-13 11:42:27,900] ( 790) INFO - [935eb9b3] callstate: HANGUP
+[2023-04-13 11:42:27,903] ( 756) INFO - [935eb9b3] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 11:42:27,920] ( 799) INFO - [935eb9b3] destroy() uuid: 935eb9b3, ani: 2059, dnis: 6658, sip_call_id: 5bde9a82-5446-123c-9d99-6cfe544cca64, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: 3d113091
+[2023-04-13 11:42:27,921] ( 801) INFO - call: <Call(3d113091-bda9-4efd-a9fc-062e339607a5, 1 sessions)>
+[2023-04-13 11:42:27,921] ( 803) INFO - hungup outbound session '935eb9b3-faac-4f3a-8eba-8cf57b16b41d' for call '3d113091-bda9-4efd-a9fc-062e339607a5'
+[2023-04-13 11:42:27,921] ( 816) INFO - all sessions for call '3d113091-bda9-4efd-a9fc-062e339607a5' were hung up
+[2023-04-13 11:42:27,921] ( 829) INFO - length - calls: 1, sessions: 3
+[2023-04-13 11:42:27,924] ( 790) INFO - [3d113091] callstate: HANGUP
+[2023-04-13 11:42:27,926] ( 761) INFO - vendor_data: ['CD202304131132576658', 'direct1', '02351640230413110001', '1', '11', '02', '20230330000345', '청약녹취Ⅰ', '', '', '02023041366587684940', '']
+[2023-04-13 11:42:27,926] ( 778) INFO - [3d113091] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 11:42:27,926] ( 779) INFO - [3d113091] Call Detail Record: {'CALL_ID': 'CD202304131132576658', 'START_TIME': '2023-04-13 11:33:04', 'END_TIME': '2023-04-13 11:42:27', 'SIP_USER': '6658', 'CALL_LIST_ID': 0, 'CAMPAIGN_ID': 40, 'IS_PLNO': '02351640230413110001', 'BOT_DIAL_RESULT': '16', 'BOT_RESULT_CAUSE': 'NORMAL_CLEARING'}
+[2023-04-13 11:42:27,927] ( 799) INFO - [3d113091] destroy() uuid: 3d113091, ani: 2059, dnis: 6658, sip_call_id: b5323e68-15015c66-13c4-55013-2d32ed3-403dabef-2d32ed3, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: 3d113091
+[2023-04-13 11:42:27,927] ( 828) INFO - no call found for '3d113091-bda9-4efd-a9fc-062e339607a5'
+[2023-04-13 11:42:27,927] ( 829) INFO - length - calls: 1, sessions: 2
+[2023-04-13 11:42:27,958] ( 464) INFO - (617450e2) CTI event: 6658 3
+[2023-04-13 11:45:00,539] ( 790) INFO - [7a29ffaf] callstate: HANGUP
+[2023-04-13 11:45:00,541] ( 756) INFO - [7a29ffaf] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 11:45:00,545] ( 799) INFO - [7a29ffaf] destroy() uuid: 7a29ffaf, ani: 4511, dnis: 6659, sip_call_id: 77a35db4-5446-123c-9d99-6cfe544cca64, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: ac67c390
+[2023-04-13 11:45:00,546] ( 801) INFO - call: <Call(ac67c390-74bc-4b6a-88cc-94e5cd9f98dd, 1 sessions)>
+[2023-04-13 11:45:00,546] ( 803) INFO - hungup outbound session '7a29ffaf-51fb-46c6-8015-71e934db9fff' for call 'ac67c390-74bc-4b6a-88cc-94e5cd9f98dd'
+[2023-04-13 11:45:00,546] ( 816) INFO - all sessions for call 'ac67c390-74bc-4b6a-88cc-94e5cd9f98dd' were hung up
+[2023-04-13 11:45:00,546] ( 829) INFO - length - calls: 0, sessions: 1
+[2023-04-13 11:45:00,549] ( 790) INFO - [ac67c390] callstate: HANGUP
+[2023-04-13 11:45:00,550] ( 761) INFO - vendor_data: ['CD202304131133446659', 'direct1', '01032547230413110002', '1', '11', '02', '20230413112932000004', '청약녹취Ⅰ', '', '', '02023041366597684969', '']
+[2023-04-13 11:45:00,550] ( 778) INFO - [ac67c390] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 11:45:00,550] ( 779) INFO - [ac67c390] Call Detail Record: {'CALL_ID': 'CD202304131133446659', 'START_TIME': '2023-04-13 11:33:50', 'END_TIME': '2023-04-13 11:45:00', 'SIP_USER': '6659', 'CALL_LIST_ID': 0, 'CAMPAIGN_ID': 40, 'IS_PLNO': '01032547230413110002', 'BOT_DIAL_RESULT': '16', 'BOT_RESULT_CAUSE': 'NORMAL_CLEARING'}
+[2023-04-13 11:45:00,551] ( 799) INFO - [ac67c390] destroy() uuid: ac67c390, ani: 4511, dnis: 6659, sip_call_id: b54c3788-15015c66-13c4-55013-2d32f01-30be0113-2d32f01, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: ac67c390
+[2023-04-13 11:45:00,551] ( 828) INFO - no call found for 'ac67c390-74bc-4b6a-88cc-94e5cd9f98dd'
+[2023-04-13 11:45:00,551] ( 829) INFO - length - calls: 0, sessions: 0
+[2023-04-13 11:45:00,665] ( 464) INFO - (617450e2) CTI event: 6659 3
+[2023-04-13 11:45:00,686] ( 464) INFO - (617450e2) CTI event: 6659 253
+[2023-04-13 11:45:10,342] ( 590) INFO - [0e8ae3b3] park() uuid: 0e8ae3b3, ani: 2202, dnis: 6660, sip_call_id: b5500088-15015c66-13c4-55013-2d331a9-3acd03f-2d331a9, code: direct-center, direction: outbound, callstate: RINGING, call_uuid: 0e8ae3b3
+[2023-04-13 11:45:10,343] ( 596) INFO - item: <class 'dict'> {'EXT_DN': '6660', 'AGENT_ID': '70060', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-04-13 11:45:10,371] ( 790) INFO - [0e8ae3b3] callstate: EARLY
+[2023-04-13 11:45:10,374] ( 657) INFO - [0e8ae3b3] answer() uuid: 0e8ae3b3, ani: 2202, dnis: 6660, sip_call_id: b5500088-15015c66-13c4-55013-2d331a9-3acd03f-2d331a9, code: direct-center, direction: outbound, callstate: EARLY, call_uuid: 0e8ae3b3
+[2023-04-13 11:45:10,375] ( 790) INFO - [0e8ae3b3] callstate: ACTIVE
+[2023-04-13 11:45:10,443] ( 464) INFO - (617450e2) CTI event: 6660 4
+[2023-04-13 11:45:10,444] ( 627) INFO - PDS event: Delivered(4 {'id': 4, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '6070', 'cause': 62402580, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '6070', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6660', 'ckind': 0, 'c1': 7685462, 'c2': 0, 'called': '6070'}, 'cnsq': 3, 'msid': 1, 'attach': {'uei': 'bot;01435545230413110002;1;11;02;20230321161734000004;청약녹취Ⅰ', 'ci': None}, 'tag': 0, 'ftime': '2023041311450301', 'cnid': '3155002032', 'this': '6660', 'fname': 'event'})
+[2023-04-13 11:45:10,444] ( 682) INFO - DONE to create record_key: 02023041366607685462
+[2023-04-13 11:45:10,449] ( 690) INFO - [0e8ae3b3] ##### bridge execute #####, sofia/gateway/Kakao/6660 CD202304131145036660|direct1|01435545230413110002|1|11|02|20230321161734000004|청약녹취Ⅰ|||02023041366607685462|
+[2023-04-13 11:45:10,453] ( 464) INFO - (617450e2) CTI event: 6660 6
+[2023-04-13 11:45:10,453] ( 630) INFO - PDS event: Established(6 {'id': 6, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '2202', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6660', 'ckind': 0, 'c1': 7685462, 'c2': 0, 'called': '6070'}, 'cnsq': 4, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041311450301', 'cnid': '3155002032', 'this': '6660', 'fname': 'event'})
+[2023-04-13 11:45:10,484] ( 790) INFO - [0e8ae3b3] callstate: RING_WAIT
+[2023-04-13 11:45:10,486] ( 716) INFO - [a43a1bde] originate() uuid: a43a1bde, ani: 2202, dnis: 6660, sip_call_id: None, code: direct-center, direction: outbound, callstate: DOWN, call_uuid: 0e8ae3b3
+[2023-04-13 11:45:10,486] ( 728) INFO - call created for session '0e8ae3b3-1d42-47b0-ab5e-32c4513ed7b0'
+[2023-04-13 11:45:10,500] ( 652) INFO - [a43a1bde] associate session a43a1bde-cf27-494f-8ede-9cd17847bece with a call 0e8ae3b3-1d42-47b0-ab5e-32c4513ed7b0
+[2023-04-13 11:45:10,501] ( 790) INFO - [a43a1bde] callstate: ACTIVE
+[2023-04-13 11:45:10,525] ( 790) INFO - [0e8ae3b3] callstate: ACTIVE
+[2023-04-13 11:45:10,696] ( 464) INFO - (617450e2) CTI event: 6660 2
+[2023-04-13 11:45:10,697] ( 632) INFO - PDS event: Conference(2 {'id': 2, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '2202', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 6, 'c3': 0, 'third': '6660', 'ckind': 0, 'c1': 7685463, 'c2': 7685462, 'called': ''}, 'cnsq': 8, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041311450401', 'cnid': '3155002032', 'this': '6660', 'fname': 'event'})
+[2023-04-13 11:45:11,896] ( 464) INFO - (617450e2) CTI event: 6660 253
+[2023-04-13 11:45:11,896] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 11:45:11,896] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;play', 'tag': 0, 'ftime': '2023041311450501', 'cnid': '', 'confirm': 1, 'this': '6660', 'fname': 'event'})
+[2023-04-13 11:45:11,896] ( 883) INFO - [0e8ae3b3] 재생 play
+[2023-04-13 11:45:11,896] ( 884) INFO - [0e8ae3b3] send_info() with sip call-id(0c9e7443-5448-123c-9d99-6cfe544cca64) 재생
+[2023-04-13 11:51:04,743] ( 464) INFO - (617450e2) CTI event: 6658 253
+[2023-04-13 11:56:25,316] ( 790) INFO - [a43a1bde] callstate: HANGUP
+[2023-04-13 11:56:25,322] ( 756) INFO - [a43a1bde] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 11:56:25,325] ( 799) INFO - [a43a1bde] destroy() uuid: a43a1bde, ani: 2202, dnis: 6660, sip_call_id: 0c9e7443-5448-123c-9d99-6cfe544cca64, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: 0e8ae3b3
+[2023-04-13 11:56:25,325] ( 801) INFO - call: <Call(0e8ae3b3-1d42-47b0-ab5e-32c4513ed7b0, 1 sessions)>
+[2023-04-13 11:56:25,325] ( 803) INFO - hungup outbound session 'a43a1bde-cf27-494f-8ede-9cd17847bece' for call '0e8ae3b3-1d42-47b0-ab5e-32c4513ed7b0'
+[2023-04-13 11:56:25,325] ( 816) INFO - all sessions for call '0e8ae3b3-1d42-47b0-ab5e-32c4513ed7b0' were hung up
+[2023-04-13 11:56:25,325] ( 829) INFO - length - calls: 0, sessions: 1
+[2023-04-13 11:56:25,327] ( 790) INFO - [0e8ae3b3] callstate: HANGUP
+[2023-04-13 11:56:25,328] ( 761) INFO - vendor_data: ['CD202304131145036660', 'direct1', '01435545230413110002', '1', '11', '02', '20230321161734000004', '청약녹취Ⅰ', '', '', '02023041366607685462', '']
+[2023-04-13 11:56:25,328] ( 778) INFO - [0e8ae3b3] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 11:56:25,328] ( 779) INFO - [0e8ae3b3] Call Detail Record: {'CALL_ID': 'CD202304131145036660', 'START_TIME': '2023-04-13 11:45:10', 'END_TIME': '2023-04-13 11:56:25', 'SIP_USER': '6660', 'CALL_LIST_ID': 0, 'CAMPAIGN_ID': 40, 'IS_PLNO': '01435545230413110002', 'BOT_DIAL_RESULT': '16', 'BOT_RESULT_CAUSE': 'NORMAL_CLEARING'}
+[2023-04-13 11:56:25,329] ( 799) INFO - [0e8ae3b3] destroy() uuid: 0e8ae3b3, ani: 2202, dnis: 6660, sip_call_id: b5500088-15015c66-13c4-55013-2d331a9-3acd03f-2d331a9, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: 0e8ae3b3
+[2023-04-13 11:56:25,329] ( 828) INFO - no call found for '0e8ae3b3-1d42-47b0-ab5e-32c4513ed7b0'
+[2023-04-13 11:56:25,329] ( 829) INFO - length - calls: 0, sessions: 0
+[2023-04-13 11:56:25,502] ( 464) INFO - (617450e2) CTI event: 6660 3
+[2023-04-13 11:56:25,624] ( 464) INFO - (617450e2) CTI event: 6660 253
+[2023-04-13 12:10:22,897] ( 590) INFO - [321c3a2a] park() uuid: 321c3a2a, ani: 4512, dnis: 6661, sip_call_id: b54344c8-15015c66-13c4-55013-2d33792-33a32ad9-2d33792, code: direct-center, direction: outbound, callstate: RINGING, call_uuid: 321c3a2a
+[2023-04-13 12:10:22,897] ( 596) INFO - item: <class 'dict'> {'EXT_DN': '6661', 'AGENT_ID': '70061', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-04-13 12:10:22,925] ( 790) INFO - [321c3a2a] callstate: EARLY
+[2023-04-13 12:10:22,928] ( 657) INFO - [321c3a2a] answer() uuid: 321c3a2a, ani: 4512, dnis: 6661, sip_call_id: b54344c8-15015c66-13c4-55013-2d33792-33a32ad9-2d33792, code: direct-center, direction: outbound, callstate: EARLY, call_uuid: 321c3a2a
+[2023-04-13 12:10:22,929] ( 790) INFO - [321c3a2a] callstate: ACTIVE
+[2023-04-13 12:10:23,052] ( 464) INFO - (617450e2) CTI event: 6661 4
+[2023-04-13 12:10:23,052] ( 627) INFO - PDS event: Delivered(4 {'id': 4, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '6070', 'cause': 62402580, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '6070', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6661', 'ckind': 0, 'c1': 7686395, 'c2': 0, 'called': '6070'}, 'cnsq': 3, 'msid': 1, 'attach': {'uei': 'bot;02354540230413120002;1;11;02;20230407094559000004;이벤트', 'ci': None}, 'tag': 0, 'ftime': '2023041312101601', 'cnid': '3155002165', 'this': '6661', 'fname': 'event'})
+[2023-04-13 12:10:23,053] ( 682) INFO - DONE to create record_key: 02023041366617686395
+[2023-04-13 12:10:23,058] ( 690) INFO - [321c3a2a] ##### bridge execute #####, sofia/gateway/Kakao/6661 CD202304131210166661|direct1|02354540230413120002|1|11|02|20230407094559000004|이벤트|||02023041366617686395|
+[2023-04-13 12:10:23,061] ( 464) INFO - (617450e2) CTI event: 6661 6
+[2023-04-13 12:10:23,061] ( 630) INFO - PDS event: Established(6 {'id': 6, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '4512', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6661', 'ckind': 0, 'c1': 7686395, 'c2': 0, 'called': '6070'}, 'cnsq': 4, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041312101601', 'cnid': '3155002165', 'this': '6661', 'fname': 'event'})
+[2023-04-13 12:10:23,091] ( 790) INFO - [321c3a2a] callstate: RING_WAIT
+[2023-04-13 12:10:23,093] ( 716) INFO - [65168ec0] originate() uuid: 65168ec0, ani: 4512, dnis: 6661, sip_call_id: None, code: direct-center, direction: outbound, callstate: DOWN, call_uuid: 321c3a2a
+[2023-04-13 12:10:23,094] ( 728) INFO - call created for session '321c3a2a-8651-447c-a6e8-b14faf08648f'
+[2023-04-13 12:10:23,131] ( 652) INFO - [65168ec0] associate session 65168ec0-6241-49cc-a311-dd3dbc4b62fe with a call 321c3a2a-8651-447c-a6e8-b14faf08648f
+[2023-04-13 12:10:23,132] ( 790) INFO - [65168ec0] callstate: ACTIVE
+[2023-04-13 12:10:23,133] ( 790) INFO - [321c3a2a] callstate: ACTIVE
+[2023-04-13 12:10:23,285] ( 464) INFO - (617450e2) CTI event: 6661 2
+[2023-04-13 12:10:23,285] ( 632) INFO - PDS event: Conference(2 {'id': 2, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '4512', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 6, 'c3': 0, 'third': '6661', 'ckind': 0, 'c1': 7686397, 'c2': 7686395, 'called': ''}, 'cnsq': 8, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041312101601', 'cnid': '3155002165', 'this': '6661', 'fname': 'event'})
+[2023-04-13 12:10:24,453] ( 464) INFO - (617450e2) CTI event: 6661 253
+[2023-04-13 12:10:24,453] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 12:10:24,453] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;play', 'tag': 0, 'ftime': '2023041312101701', 'cnid': '', 'confirm': 1, 'this': '6661', 'fname': 'event'})
+[2023-04-13 12:10:24,454] ( 883) INFO - [321c3a2a] 재생 play
+[2023-04-13 12:10:24,454] ( 884) INFO - [321c3a2a] send_info() with sip call-id(9234ddf7-544b-123c-9d99-6cfe544cca64) 재생
+[2023-04-13 12:14:40,941] ( 790) INFO - [65168ec0] callstate: HANGUP
+[2023-04-13 12:14:40,947] ( 756) INFO - [65168ec0] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 12:14:40,950] ( 799) INFO - [65168ec0] destroy() uuid: 65168ec0, ani: 4512, dnis: 6661, sip_call_id: 9234ddf7-544b-123c-9d99-6cfe544cca64, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: 321c3a2a
+[2023-04-13 12:14:40,950] ( 801) INFO - call: <Call(321c3a2a-8651-447c-a6e8-b14faf08648f, 1 sessions)>
+[2023-04-13 12:14:40,950] ( 803) INFO - hungup outbound session '65168ec0-6241-49cc-a311-dd3dbc4b62fe' for call '321c3a2a-8651-447c-a6e8-b14faf08648f'
+[2023-04-13 12:14:40,950] ( 816) INFO - all sessions for call '321c3a2a-8651-447c-a6e8-b14faf08648f' were hung up
+[2023-04-13 12:14:40,950] ( 829) INFO - length - calls: 0, sessions: 1
+[2023-04-13 12:14:40,951] ( 790) INFO - [321c3a2a] callstate: HANGUP
+[2023-04-13 12:14:40,952] ( 761) INFO - vendor_data: ['CD202304131210166661', 'direct1', '02354540230413120002', '1', '11', '02', '20230407094559000004', '이벤트', '', '', '02023041366617686395', '']
+[2023-04-13 12:14:40,952] ( 778) INFO - [321c3a2a] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 12:14:40,952] ( 779) INFO - [321c3a2a] Call Detail Record: {'CALL_ID': 'CD202304131210166661', 'START_TIME': '2023-04-13 12:10:22', 'END_TIME': '2023-04-13 12:14:40', 'SIP_USER': '6661', 'CALL_LIST_ID': 0, 'CAMPAIGN_ID': 40, 'IS_PLNO': '02354540230413120002', 'BOT_DIAL_RESULT': '16', 'BOT_RESULT_CAUSE': 'NORMAL_CLEARING'}
+[2023-04-13 12:14:40,952] ( 799) INFO - [321c3a2a] destroy() uuid: 321c3a2a, ani: 4512, dnis: 6661, sip_call_id: b54344c8-15015c66-13c4-55013-2d33792-33a32ad9-2d33792, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: 321c3a2a
+[2023-04-13 12:14:40,953] ( 828) INFO - no call found for '321c3a2a-8651-447c-a6e8-b14faf08648f'
+[2023-04-13 12:14:40,953] ( 829) INFO - length - calls: 0, sessions: 0
+[2023-04-13 12:14:41,036] ( 464) INFO - (617450e2) CTI event: 6661 3
+[2023-04-13 12:14:41,086] ( 464) INFO - (617450e2) CTI event: 6661 253
+[2023-04-13 13:14:55,567] ( 590) INFO - [9d7ce1cb] park() uuid: 9d7ce1cb, ani: 2030, dnis: 6662, sip_call_id: b53ad7e8-15015c66-13c4-55013-2d346b3-59fdbe1a-2d346b3, code: direct-center, direction: outbound, callstate: RINGING, call_uuid: 9d7ce1cb
+[2023-04-13 13:14:55,567] ( 596) INFO - item: <class 'dict'> {'EXT_DN': '6662', 'AGENT_ID': '70062', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-04-13 13:14:55,619] ( 790) INFO - [9d7ce1cb] callstate: EARLY
+[2023-04-13 13:14:55,622] ( 657) INFO - [9d7ce1cb] answer() uuid: 9d7ce1cb, ani: 2030, dnis: 6662, sip_call_id: b53ad7e8-15015c66-13c4-55013-2d346b3-59fdbe1a-2d346b3, code: direct-center, direction: outbound, callstate: EARLY, call_uuid: 9d7ce1cb
+[2023-04-13 13:14:55,622] ( 790) INFO - [9d7ce1cb] callstate: ACTIVE
+[2023-04-13 13:14:55,713] ( 464) INFO - (617450e2) CTI event: 6662 4
+[2023-04-13 13:14:55,714] ( 627) INFO - PDS event: Delivered(4 {'id': 4, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '6070', 'cause': 62402580, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '6070', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6662', 'ckind': 0, 'c1': 7686917, 'c2': 0, 'called': '6070'}, 'cnsq': 3, 'msid': 1, 'attach': {'uei': 'bot;00865908230413130001;1;11;02;20230228014824;청약녹취Ⅰ', 'ci': None}, 'tag': 0, 'ftime': '2023041313144901', 'cnid': '3155002381', 'this': '6662', 'fname': 'event'})
+[2023-04-13 13:14:55,714] ( 682) INFO - DONE to create record_key: 02023041366627686917
+[2023-04-13 13:14:55,719] ( 690) INFO - [9d7ce1cb] ##### bridge execute #####, sofia/gateway/Kakao/6662 CD202304131314496662|direct1|00865908230413130001|1|11|02|20230228014824|청약녹취Ⅰ|||02023041366627686917|
+[2023-04-13 13:14:55,723] ( 464) INFO - (617450e2) CTI event: 6662 6
+[2023-04-13 13:14:55,723] ( 630) INFO - PDS event: Established(6 {'id': 6, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '2030', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6662', 'ckind': 0, 'c1': 7686917, 'c2': 0, 'called': '6070'}, 'cnsq': 4, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041313144901', 'cnid': '3155002381', 'this': '6662', 'fname': 'event'})
+[2023-04-13 13:14:55,754] ( 790) INFO - [9d7ce1cb] callstate: RING_WAIT
+[2023-04-13 13:14:55,757] ( 716) INFO - [07b9453e] originate() uuid: 07b9453e, ani: 2030, dnis: 6662, sip_call_id: None, code: direct-center, direction: outbound, callstate: DOWN, call_uuid: 9d7ce1cb
+[2023-04-13 13:14:55,757] ( 728) INFO - call created for session '9d7ce1cb-e3c6-40a5-a46a-f8f0d2ba0b40'
+[2023-04-13 13:14:55,875] ( 652) INFO - [07b9453e] associate session 07b9453e-337c-4034-8403-eef310e8a143 with a call 9d7ce1cb-e3c6-40a5-a46a-f8f0d2ba0b40
+[2023-04-13 13:14:55,876] ( 790) INFO - [07b9453e] callstate: ACTIVE
+[2023-04-13 13:14:55,889] ( 790) INFO - [9d7ce1cb] callstate: ACTIVE
+[2023-04-13 13:14:55,946] ( 464) INFO - (617450e2) CTI event: 6662 2
+[2023-04-13 13:14:55,946] ( 632) INFO - PDS event: Conference(2 {'id': 2, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '2030', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 6, 'c3': 0, 'third': '6662', 'ckind': 0, 'c1': 7686918, 'c2': 7686917, 'called': ''}, 'cnsq': 8, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041313144901', 'cnid': '3155002381', 'this': '6662', 'fname': 'event'})
+[2023-04-13 13:14:57,508] ( 464) INFO - (617450e2) CTI event: 6662 253
+[2023-04-13 13:14:57,508] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 13:14:57,508] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;play', 'tag': 0, 'ftime': '2023041313145101', 'cnid': '', 'confirm': 1, 'this': '6662', 'fname': 'event'})
+[2023-04-13 13:14:57,508] ( 883) INFO - [9d7ce1cb] 재생 play
+[2023-04-13 13:14:57,508] ( 884) INFO - [9d7ce1cb] send_info() with sip call-id(967e8ffc-5454-123c-9d99-6cfe544cca64) 재생
+[2023-04-13 13:17:23,427] ( 790) INFO - [07b9453e] callstate: HANGUP
+[2023-04-13 13:17:23,429] ( 756) INFO - [07b9453e] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 13:17:23,433] ( 799) INFO - [07b9453e] destroy() uuid: 07b9453e, ani: 2030, dnis: 6662, sip_call_id: 967e8ffc-5454-123c-9d99-6cfe544cca64, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: 9d7ce1cb
+[2023-04-13 13:17:23,433] ( 801) INFO - call: <Call(9d7ce1cb-e3c6-40a5-a46a-f8f0d2ba0b40, 1 sessions)>
+[2023-04-13 13:17:23,433] ( 803) INFO - hungup outbound session '07b9453e-337c-4034-8403-eef310e8a143' for call '9d7ce1cb-e3c6-40a5-a46a-f8f0d2ba0b40'
+[2023-04-13 13:17:23,433] ( 816) INFO - all sessions for call '9d7ce1cb-e3c6-40a5-a46a-f8f0d2ba0b40' were hung up
+[2023-04-13 13:17:23,434] ( 829) INFO - length - calls: 0, sessions: 1
+[2023-04-13 13:17:23,437] ( 790) INFO - [9d7ce1cb] callstate: HANGUP
+[2023-04-13 13:17:23,438] ( 761) INFO - vendor_data: ['CD202304131314496662', 'direct1', '00865908230413130001', '1', '11', '02', '20230228014824', '청약녹취Ⅰ', '', '', '02023041366627686917', '']
+[2023-04-13 13:17:23,438] ( 778) INFO - [9d7ce1cb] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 13:17:23,438] ( 779) INFO - [9d7ce1cb] Call Detail Record: {'CALL_ID': 'CD202304131314496662', 'START_TIME': '2023-04-13 13:14:55', 'END_TIME': '2023-04-13 13:17:23', 'SIP_USER': '6662', 'CALL_LIST_ID': 0, 'CAMPAIGN_ID': 40, 'IS_PLNO': '00865908230413130001', 'BOT_DIAL_RESULT': '16', 'BOT_RESULT_CAUSE': 'NORMAL_CLEARING'}
+[2023-04-13 13:17:23,440] ( 799) INFO - [9d7ce1cb] destroy() uuid: 9d7ce1cb, ani: 2030, dnis: 6662, sip_call_id: b53ad7e8-15015c66-13c4-55013-2d346b3-59fdbe1a-2d346b3, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: 9d7ce1cb
+[2023-04-13 13:17:23,440] ( 828) INFO - no call found for '9d7ce1cb-e3c6-40a5-a46a-f8f0d2ba0b40'
+[2023-04-13 13:17:23,440] ( 829) INFO - length - calls: 0, sessions: 0
+[2023-04-13 13:17:23,591] ( 464) INFO - (617450e2) CTI event: 6662 3
+[2023-04-13 13:17:23,600] ( 464) INFO - (617450e2) CTI event: 6662 253
+[2023-04-13 13:31:13,657] ( 590) INFO - [689320cb] park() uuid: 689320cb, ani: 4151, dnis: 6663, sip_call_id: b53d3e08-15015c66-13c4-55013-2d34a85-70c53093-2d34a85, code: direct-center, direction: outbound, callstate: RINGING, call_uuid: 689320cb
+[2023-04-13 13:31:13,657] ( 596) INFO - item: <class 'dict'> {'EXT_DN': '6663', 'AGENT_ID': '70063', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-04-13 13:31:13,686] ( 790) INFO - [689320cb] callstate: EARLY
+[2023-04-13 13:31:13,689] ( 657) INFO - [689320cb] answer() uuid: 689320cb, ani: 4151, dnis: 6663, sip_call_id: b53d3e08-15015c66-13c4-55013-2d34a85-70c53093-2d34a85, code: direct-center, direction: outbound, callstate: EARLY, call_uuid: 689320cb
+[2023-04-13 13:31:13,689] ( 790) INFO - [689320cb] callstate: ACTIVE
+[2023-04-13 13:31:13,758] ( 464) INFO - (617450e2) CTI event: 6663 4
+[2023-04-13 13:31:13,758] ( 627) INFO - PDS event: Delivered(4 {'id': 4, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '6070', 'cause': 62402580, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '6070', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6663', 'ckind': 0, 'c1': 7687269, 'c2': 0, 'called': '6070'}, 'cnsq': 3, 'msid': 1, 'attach': {'uei': 'bot;01704453230413130004;1;11;02;20230315142512000004;청약녹취Ⅰ', 'ci': None}, 'tag': 0, 'ftime': '2023041313310701', 'cnid': '3155002559', 'this': '6663', 'fname': 'event'})
+[2023-04-13 13:31:13,759] ( 682) INFO - DONE to create record_key: 02023041366637687269
+[2023-04-13 13:31:13,764] ( 690) INFO - [689320cb] ##### bridge execute #####, sofia/gateway/Kakao/6663 CD202304131331076663|direct1|01704453230413130004|1|11|02|20230315142512000004|청약녹취Ⅰ|||02023041366637687269|
+[2023-04-13 13:31:13,768] ( 464) INFO - (617450e2) CTI event: 6663 6
+[2023-04-13 13:31:13,768] ( 630) INFO - PDS event: Established(6 {'id': 6, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '4151', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6663', 'ckind': 0, 'c1': 7687269, 'c2': 0, 'called': '6070'}, 'cnsq': 4, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041313310701', 'cnid': '3155002559', 'this': '6663', 'fname': 'event'})
+[2023-04-13 13:31:13,799] ( 790) INFO - [689320cb] callstate: RING_WAIT
+[2023-04-13 13:31:13,801] ( 716) INFO - [25c08caa] originate() uuid: 25c08caa, ani: 4151, dnis: 6663, sip_call_id: None, code: direct-center, direction: outbound, callstate: DOWN, call_uuid: 689320cb
+[2023-04-13 13:31:13,802] ( 728) INFO - call created for session '689320cb-0a52-4737-8169-661973b62d7a'
+[2023-04-13 13:31:13,840] ( 652) INFO - [25c08caa] associate session 25c08caa-4eeb-4fbf-9c3c-dbec94fd9fc5 with a call 689320cb-0a52-4737-8169-661973b62d7a
+[2023-04-13 13:31:13,840] ( 790) INFO - [25c08caa] callstate: ACTIVE
+[2023-04-13 13:31:13,853] ( 790) INFO - [689320cb] callstate: ACTIVE
+[2023-04-13 13:31:13,991] ( 464) INFO - (617450e2) CTI event: 6663 2
+[2023-04-13 13:31:13,991] ( 632) INFO - PDS event: Conference(2 {'id': 2, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '4151', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 6, 'c3': 0, 'third': '6663', 'ckind': 0, 'c1': 7687270, 'c2': 7687269, 'called': ''}, 'cnsq': 8, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041313310701', 'cnid': '3155002559', 'this': '6663', 'fname': 'event'})
+[2023-04-13 13:31:18,104] ( 464) INFO - (617450e2) CTI event: 6663 253
+[2023-04-13 13:31:18,104] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 13:31:18,104] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;play', 'tag': 0, 'ftime': '2023041313311101', 'cnid': '', 'confirm': 1, 'this': '6663', 'fname': 'event'})
+[2023-04-13 13:31:18,104] ( 883) INFO - [689320cb] 재생 play
+[2023-04-13 13:31:18,105] ( 884) INFO - [689320cb] send_info() with sip call-id(dd744839-5456-123c-9d99-6cfe544cca64) 재생
+[2023-04-13 13:40:52,579] ( 464) INFO - (617450e2) CTI event: 6663 253
+[2023-04-13 13:40:52,579] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 13:40:52,580] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;pause', 'tag': 0, 'ftime': '2023041313404601', 'cnid': '', 'confirm': 1, 'this': '6663', 'fname': 'event'})
+[2023-04-13 13:40:52,580] ( 883) INFO - [689320cb] 일시정지 pause
+[2023-04-13 13:40:52,580] ( 884) INFO - [689320cb] send_info() with sip call-id(dd744839-5456-123c-9d99-6cfe544cca64) 일시정지
+[2023-04-13 13:40:57,699] ( 790) INFO - [25c08caa] callstate: HANGUP
+[2023-04-13 13:40:57,706] ( 756) INFO - [25c08caa] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 13:40:57,708] ( 799) INFO - [25c08caa] destroy() uuid: 25c08caa, ani: 4151, dnis: 6663, sip_call_id: dd744839-5456-123c-9d99-6cfe544cca64, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: 689320cb
+[2023-04-13 13:40:57,708] ( 801) INFO - call: <Call(689320cb-0a52-4737-8169-661973b62d7a, 1 sessions)>
+[2023-04-13 13:40:57,708] ( 803) INFO - hungup outbound session '25c08caa-4eeb-4fbf-9c3c-dbec94fd9fc5' for call '689320cb-0a52-4737-8169-661973b62d7a'
+[2023-04-13 13:40:57,708] ( 816) INFO - all sessions for call '689320cb-0a52-4737-8169-661973b62d7a' were hung up
+[2023-04-13 13:40:57,708] ( 829) INFO - length - calls: 0, sessions: 1
+[2023-04-13 13:40:57,709] ( 790) INFO - [689320cb] callstate: HANGUP
+[2023-04-13 13:40:57,710] ( 761) INFO - vendor_data: ['CD202304131331076663', 'direct1', '01704453230413130004', '1', '11', '02', '20230315142512000004', '청약녹취Ⅰ', '', '', '02023041366637687269', '']
+[2023-04-13 13:40:57,710] ( 778) INFO - [689320cb] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 13:40:57,710] ( 779) INFO - [689320cb] Call Detail Record: {'CALL_ID': 'CD202304131331076663', 'START_TIME': '2023-04-13 13:31:13', 'END_TIME': '2023-04-13 13:40:57', 'SIP_USER': '6663', 'CALL_LIST_ID': 0, 'CAMPAIGN_ID': 40, 'IS_PLNO': '01704453230413130004', 'BOT_DIAL_RESULT': '16', 'BOT_RESULT_CAUSE': 'NORMAL_CLEARING'}
+[2023-04-13 13:40:57,711] ( 799) INFO - [689320cb] destroy() uuid: 689320cb, ani: 4151, dnis: 6663, sip_call_id: b53d3e08-15015c66-13c4-55013-2d34a85-70c53093-2d34a85, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: 689320cb
+[2023-04-13 13:40:57,711] ( 828) INFO - no call found for '689320cb-0a52-4737-8169-661973b62d7a'
+[2023-04-13 13:40:57,711] ( 829) INFO - length - calls: 0, sessions: 0
+[2023-04-13 13:40:57,818] ( 464) INFO - (617450e2) CTI event: 6663 3
+[2023-04-13 13:40:58,190] ( 464) INFO - (617450e2) CTI event: 6663 253
+[2023-04-13 14:54:15,408] ( 590) INFO - [f6a43278] park() uuid: f6a43278, ani: 4534, dnis: 6664, sip_call_id: b571a748-15015c66-13c4-55013-2d35dfb-2d094ea8-2d35dfb, code: direct-center, direction: outbound, callstate: RINGING, call_uuid: f6a43278
+[2023-04-13 14:54:15,408] ( 596) INFO - item: <class 'dict'> {'EXT_DN': '6664', 'AGENT_ID': '70064', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-04-13 14:54:15,437] ( 790) INFO - [f6a43278] callstate: EARLY
+[2023-04-13 14:54:15,439] ( 657) INFO - [f6a43278] answer() uuid: f6a43278, ani: 4534, dnis: 6664, sip_call_id: b571a748-15015c66-13c4-55013-2d35dfb-2d094ea8-2d35dfb, code: direct-center, direction: outbound, callstate: EARLY, call_uuid: f6a43278
+[2023-04-13 14:54:15,440] ( 790) INFO - [f6a43278] callstate: ACTIVE
+[2023-04-13 14:54:15,570] ( 464) INFO - (617450e2) CTI event: 6664 4
+[2023-04-13 14:54:15,570] ( 627) INFO - PDS event: Delivered(4 {'id': 4, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '6070', 'cause': 62402580, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '6070', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6664', 'ckind': 0, 'c1': 7691910, 'c2': 0, 'called': '6070'}, 'cnsq': 3, 'msid': 1, 'attach': {'uei': 'bot;00962786230413140003;1;11;02;20230413000478;이벤트', 'ci': None}, 'tag': 0, 'ftime': '2023041314540901', 'cnid': '3155004448', 'this': '6664', 'fname': 'event'})
+[2023-04-13 14:54:15,571] ( 682) INFO - DONE to create record_key: 02023041366647691910
+[2023-04-13 14:54:15,576] ( 690) INFO - [f6a43278] ##### bridge execute #####, sofia/gateway/Kakao/6664 CD202304131454096664|direct1|00962786230413140003|1|11|02|20230413000478|이벤트|||02023041366647691910|
+[2023-04-13 14:54:15,579] ( 464) INFO - (617450e2) CTI event: 6664 6
+[2023-04-13 14:54:15,579] ( 630) INFO - PDS event: Established(6 {'id': 6, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '4534', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6664', 'ckind': 0, 'c1': 7691910, 'c2': 0, 'called': '6070'}, 'cnsq': 4, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041314540901', 'cnid': '3155004448', 'this': '6664', 'fname': 'event'})
+[2023-04-13 14:54:15,611] ( 790) INFO - [f6a43278] callstate: RING_WAIT
+[2023-04-13 14:54:15,613] ( 716) INFO - [438927eb] originate() uuid: 438927eb, ani: 4534, dnis: 6664, sip_call_id: None, code: direct-center, direction: outbound, callstate: DOWN, call_uuid: f6a43278
+[2023-04-13 14:54:15,614] ( 728) INFO - call created for session 'f6a43278-cce1-4467-a8f5-cbf8d962b124'
+[2023-04-13 14:54:15,651] ( 652) INFO - [438927eb] associate session 438927eb-62b6-4c3c-b547-4304c3d76d9a with a call f6a43278-cce1-4467-a8f5-cbf8d962b124
+[2023-04-13 14:54:15,664] ( 790) INFO - [438927eb] callstate: ACTIVE
+[2023-04-13 14:54:15,665] ( 790) INFO - [f6a43278] callstate: ACTIVE
+[2023-04-13 14:54:15,772] ( 464) INFO - (617450e2) CTI event: 6664 2
+[2023-04-13 14:54:15,772] ( 632) INFO - PDS event: Conference(2 {'id': 2, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '4534', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 6, 'c3': 0, 'third': '6664', 'ckind': 0, 'c1': 7691911, 'c2': 7691910, 'called': ''}, 'cnsq': 8, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041314540901', 'cnid': '3155004448', 'this': '6664', 'fname': 'event'})
+[2023-04-13 14:54:16,266] ( 464) INFO - (617450e2) CTI event: 6664 253
+[2023-04-13 14:54:16,267] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 14:54:16,267] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;play', 'tag': 0, 'ftime': '2023041314540901', 'cnid': '', 'confirm': 1, 'this': '6664', 'fname': 'event'})
+[2023-04-13 14:54:16,267] ( 883) INFO - [f6a43278] 재생 play
+[2023-04-13 14:54:16,267] ( 884) INFO - [f6a43278] send_info() with sip call-id(76d9929c-5462-123c-9d99-6cfe544cca64) 재생
+[2023-04-13 14:57:19,441] ( 464) INFO - (617450e2) CTI event: 6664 253
+[2023-04-13 14:57:19,441] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 14:57:19,441] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;pause', 'tag': 0, 'ftime': '2023041314571201', 'cnid': '', 'confirm': 1, 'this': '6664', 'fname': 'event'})
+[2023-04-13 14:57:19,441] ( 883) INFO - [f6a43278] 일시정지 pause
+[2023-04-13 14:57:19,442] ( 884) INFO - [f6a43278] send_info() with sip call-id(76d9929c-5462-123c-9d99-6cfe544cca64) 일시정지
+[2023-04-13 14:57:20,847] ( 790) INFO - [438927eb] callstate: HANGUP
+[2023-04-13 14:57:20,852] ( 756) INFO - [438927eb] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 14:57:20,854] ( 790) INFO - [f6a43278] callstate: HANGUP
+[2023-04-13 14:57:20,855] ( 799) INFO - [438927eb] destroy() uuid: 438927eb, ani: 4534, dnis: 6664, sip_call_id: 76d9929c-5462-123c-9d99-6cfe544cca64, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: f6a43278
+[2023-04-13 14:57:20,855] ( 801) INFO - call: <Call(f6a43278-cce1-4467-a8f5-cbf8d962b124, 1 sessions)>
+[2023-04-13 14:57:20,855] ( 803) INFO - hungup outbound session '438927eb-62b6-4c3c-b547-4304c3d76d9a' for call 'f6a43278-cce1-4467-a8f5-cbf8d962b124'
+[2023-04-13 14:57:20,855] ( 816) INFO - all sessions for call 'f6a43278-cce1-4467-a8f5-cbf8d962b124' were hung up
+[2023-04-13 14:57:20,855] ( 829) INFO - length - calls: 0, sessions: 1
+[2023-04-13 14:57:20,857] ( 761) INFO - vendor_data: ['CD202304131454096664', 'direct1', '00962786230413140003', '1', '11', '02', '20230413000478', '이벤트', '', '', '02023041366647691910', '']
+[2023-04-13 14:57:20,857] ( 778) INFO - [f6a43278] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 14:57:20,857] ( 779) INFO - [f6a43278] Call Detail Record: {'CALL_ID': 'CD202304131454096664', 'START_TIME': '2023-04-13 14:54:15', 'END_TIME': '2023-04-13 14:57:20', 'SIP_USER': '6664', 'CALL_LIST_ID': 0, 'CAMPAIGN_ID': 40, 'IS_PLNO': '00962786230413140003', 'BOT_DIAL_RESULT': '16', 'BOT_RESULT_CAUSE': 'NORMAL_CLEARING'}
+[2023-04-13 14:57:20,857] ( 799) INFO - [f6a43278] destroy() uuid: f6a43278, ani: 4534, dnis: 6664, sip_call_id: b571a748-15015c66-13c4-55013-2d35dfb-2d094ea8-2d35dfb, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: f6a43278
+[2023-04-13 14:57:20,858] ( 828) INFO - no call found for 'f6a43278-cce1-4467-a8f5-cbf8d962b124'
+[2023-04-13 14:57:20,858] ( 829) INFO - length - calls: 0, sessions: 0
+[2023-04-13 14:57:20,923] ( 464) INFO - (617450e2) CTI event: 6664 3
+[2023-04-13 14:57:21,215] ( 464) INFO - (617450e2) CTI event: 6664 253
+[2023-04-13 15:17:55,456] ( 590) INFO - [f1e03780] park() uuid: f1e03780, ani: 2045, dnis: 6667, sip_call_id: b42bf8e8-15015c66-13c4-55013-2d36387-68d49f77-2d36387, code: direct-center, direction: outbound, callstate: RINGING, call_uuid: f1e03780
+[2023-04-13 15:17:55,457] ( 596) INFO - item: <class 'dict'> {'EXT_DN': '6667', 'AGENT_ID': '70067', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-04-13 15:17:55,485] ( 790) INFO - [f1e03780] callstate: EARLY
+[2023-04-13 15:17:55,488] ( 657) INFO - [f1e03780] answer() uuid: f1e03780, ani: 2045, dnis: 6667, sip_call_id: b42bf8e8-15015c66-13c4-55013-2d36387-68d49f77-2d36387, code: direct-center, direction: outbound, callstate: EARLY, call_uuid: f1e03780
+[2023-04-13 15:17:55,489] ( 790) INFO - [f1e03780] callstate: ACTIVE
+[2023-04-13 15:17:55,559] ( 464) INFO - (617450e2) CTI event: 6667 4
+[2023-04-13 15:17:55,560] ( 627) INFO - PDS event: Delivered(4 {'id': 4, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '6070', 'cause': 62402580, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '6070', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6667', 'ckind': 0, 'c1': 7692710, 'c2': 0, 'called': '6070'}, 'cnsq': 3, 'msid': 1, 'attach': {'uei': 'bot;00865876230413150002;1;11;02;20230131019656;청약녹취Ⅰ', 'ci': None}, 'tag': 0, 'ftime': '2023041315174901', 'cnid': '3155004746', 'this': '6667', 'fname': 'event'})
+[2023-04-13 15:17:55,560] ( 682) INFO - DONE to create record_key: 02023041366677692710
+[2023-04-13 15:17:55,565] ( 690) INFO - [f1e03780] ##### bridge execute #####, sofia/gateway/Kakao/6667 CD202304131517496667|direct1|00865876230413150002|1|11|02|20230131019656|청약녹취Ⅰ|||02023041366677692710|
+[2023-04-13 15:17:55,578] ( 464) INFO - (617450e2) CTI event: 6667 6
+[2023-04-13 15:17:55,578] ( 630) INFO - PDS event: Established(6 {'id': 6, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '2045', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6667', 'ckind': 0, 'c1': 7692710, 'c2': 0, 'called': '6070'}, 'cnsq': 4, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041315174901', 'cnid': '3155004746', 'this': '6667', 'fname': 'event'})
+[2023-04-13 15:17:55,601] ( 790) INFO - [f1e03780] callstate: RING_WAIT
+[2023-04-13 15:17:55,604] ( 716) INFO - [d164709f] originate() uuid: d164709f, ani: 2045, dnis: 6667, sip_call_id: None, code: direct-center, direction: outbound, callstate: DOWN, call_uuid: f1e03780
+[2023-04-13 15:17:55,604] ( 728) INFO - call created for session 'f1e03780-c247-4e41-90ac-fcf324a28ac9'
+[2023-04-13 15:17:55,619] ( 652) INFO - [d164709f] associate session d164709f-089d-4c20-8686-8ee97af6ce07 with a call f1e03780-c247-4e41-90ac-fcf324a28ac9
+[2023-04-13 15:17:55,620] ( 790) INFO - [d164709f] callstate: ACTIVE
+[2023-04-13 15:17:55,633] ( 790) INFO - [f1e03780] callstate: ACTIVE
+[2023-04-13 15:17:55,752] ( 464) INFO - (617450e2) CTI event: 6667 2
+[2023-04-13 15:17:55,752] ( 632) INFO - PDS event: Conference(2 {'id': 2, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '2045', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 6, 'c3': 0, 'third': '6667', 'ckind': 0, 'c1': 7692711, 'c2': 7692710, 'called': ''}, 'cnsq': 8, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041315174901', 'cnid': '3155004746', 'this': '6667', 'fname': 'event'})
+[2023-04-13 15:17:57,071] ( 464) INFO - (617450e2) CTI event: 6667 253
+[2023-04-13 15:17:57,072] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 15:17:57,072] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;play', 'tag': 0, 'ftime': '2023041315175001', 'cnid': '', 'confirm': 1, 'this': '6667', 'fname': 'event'})
+[2023-04-13 15:17:57,072] ( 883) INFO - [f1e03780] 재생 play
+[2023-04-13 15:17:57,072] ( 884) INFO - [f1e03780] send_info() with sip call-id(c538b034-5465-123c-9d99-6cfe544cca64) 재생
+[2023-04-13 15:26:40,062] ( 464) INFO - (617450e2) CTI event: 6667 253
+[2023-04-13 15:26:40,063] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 15:26:40,063] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;play', 'tag': 0, 'ftime': '2023041315263301', 'cnid': '', 'confirm': 1, 'this': '6667', 'fname': 'event'})
+[2023-04-13 15:26:40,063] ( 883) INFO - [f1e03780] 재생 play
+[2023-04-13 15:26:40,063] ( 884) INFO - [f1e03780] send_info() with sip call-id(c538b034-5465-123c-9d99-6cfe544cca64) 재생
+[2023-04-13 15:26:40,694] ( 790) INFO - [d164709f] callstate: HANGUP
+[2023-04-13 15:26:40,696] ( 756) INFO - [d164709f] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 15:26:40,701] ( 799) INFO - [d164709f] destroy() uuid: d164709f, ani: 2045, dnis: 6667, sip_call_id: c538b034-5465-123c-9d99-6cfe544cca64, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: f1e03780
+[2023-04-13 15:26:40,701] ( 801) INFO - call: <Call(f1e03780-c247-4e41-90ac-fcf324a28ac9, 1 sessions)>
+[2023-04-13 15:26:40,702] ( 803) INFO - hungup outbound session 'd164709f-089d-4c20-8686-8ee97af6ce07' for call 'f1e03780-c247-4e41-90ac-fcf324a28ac9'
+[2023-04-13 15:26:40,702] ( 816) INFO - all sessions for call 'f1e03780-c247-4e41-90ac-fcf324a28ac9' were hung up
+[2023-04-13 15:26:40,702] ( 829) INFO - length - calls: 0, sessions: 1
+[2023-04-13 15:26:40,704] ( 790) INFO - [f1e03780] callstate: HANGUP
+[2023-04-13 15:26:40,706] ( 761) INFO - vendor_data: ['CD202304131517496667', 'direct1', '00865876230413150002', '1', '11', '02', '20230131019656', '청약녹취Ⅰ', '', '', '02023041366677692710', '']
+[2023-04-13 15:26:40,706] ( 778) INFO - [f1e03780] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 15:26:40,706] ( 779) INFO - [f1e03780] Call Detail Record: {'CALL_ID': 'CD202304131517496667', 'START_TIME': '2023-04-13 15:17:55', 'END_TIME': '2023-04-13 15:26:40', 'SIP_USER': '6667', 'CALL_LIST_ID': 0, 'CAMPAIGN_ID': 40, 'IS_PLNO': '00865876230413150002', 'BOT_DIAL_RESULT': '16', 'BOT_RESULT_CAUSE': 'NORMAL_CLEARING'}
+[2023-04-13 15:26:40,707] ( 799) INFO - [f1e03780] destroy() uuid: f1e03780, ani: 2045, dnis: 6667, sip_call_id: b42bf8e8-15015c66-13c4-55013-2d36387-68d49f77-2d36387, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: f1e03780
+[2023-04-13 15:26:40,708] ( 828) INFO - no call found for 'f1e03780-c247-4e41-90ac-fcf324a28ac9'
+[2023-04-13 15:26:40,708] ( 829) INFO - length - calls: 0, sessions: 0
+[2023-04-13 15:26:40,819] ( 464) INFO - (617450e2) CTI event: 6667 3
+[2023-04-13 15:32:10,311] ( 464) INFO - (617450e2) CTI event: 6667 253
+[2023-04-13 17:41:04,834] ( 590) INFO - [5e194757] park() uuid: 5e194757, ani: 2149, dnis: 6658, sip_call_id: b569a6c8-15015c66-13c4-55013-2d38515-6b2285d5-2d38515, code: direct-center, direction: outbound, callstate: RINGING, call_uuid: 5e194757
+[2023-04-13 17:41:04,834] ( 596) INFO - item: <class 'dict'> {'EXT_DN': '6658', 'AGENT_ID': '70058', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-04-13 17:41:04,863] ( 790) INFO - [5e194757] callstate: EARLY
+[2023-04-13 17:41:04,865] ( 657) INFO - [5e194757] answer() uuid: 5e194757, ani: 2149, dnis: 6658, sip_call_id: b569a6c8-15015c66-13c4-55013-2d38515-6b2285d5-2d38515, code: direct-center, direction: outbound, callstate: EARLY, call_uuid: 5e194757
+[2023-04-13 17:41:04,866] ( 790) INFO - [5e194757] callstate: ACTIVE
+[2023-04-13 17:41:04,929] ( 464) INFO - (617450e2) CTI event: 6658 4
+[2023-04-13 17:41:04,929] ( 627) INFO - PDS event: Delivered(4 {'id': 4, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '6070', 'cause': 62402580, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '6070', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6658', 'ckind': 0, 'c1': 7695200, 'c2': 0, 'called': '6070'}, 'cnsq': 3, 'msid': 1, 'attach': {'uei': 'bot;01124943230413170005;1;11;02;20230228024062;청약녹취Ⅰ', 'ci': None}, 'tag': 0, 'ftime': '2023041317405801', 'cnid': '3155006973', 'this': '6658', 'fname': 'event'})
+[2023-04-13 17:41:04,930] ( 682) INFO - DONE to create record_key: 02023041366587695200
+[2023-04-13 17:41:04,935] ( 690) INFO - [5e194757] ##### bridge execute #####, sofia/gateway/Kakao/6658 CD202304131740586658|direct1|01124943230413170005|1|11|02|20230228024062|청약녹취Ⅰ|||02023041366587695200|
+[2023-04-13 17:41:04,939] ( 464) INFO - (617450e2) CTI event: 6658 6
+[2023-04-13 17:41:04,939] ( 630) INFO - PDS event: Established(6 {'id': 6, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '2149', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6658', 'ckind': 0, 'c1': 7695200, 'c2': 0, 'called': '6070'}, 'cnsq': 4, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041317405801', 'cnid': '3155006973', 'this': '6658', 'fname': 'event'})
+[2023-04-13 17:41:04,969] ( 790) INFO - [5e194757] callstate: RING_WAIT
+[2023-04-13 17:41:04,971] ( 716) INFO - [684bca70] originate() uuid: 684bca70, ani: 2149, dnis: 6658, sip_call_id: None, code: direct-center, direction: outbound, callstate: DOWN, call_uuid: 5e194757
+[2023-04-13 17:41:04,972] ( 728) INFO - call created for session '5e194757-97b5-4cff-9594-ce0457c130b7'
+[2023-04-13 17:41:05,009] ( 652) INFO - [684bca70] associate session 684bca70-04c1-4abf-9695-3d69322ebd5b with a call 5e194757-97b5-4cff-9594-ce0457c130b7
+[2023-04-13 17:41:05,010] ( 790) INFO - [684bca70] callstate: ACTIVE
+[2023-04-13 17:41:05,022] ( 790) INFO - [5e194757] callstate: ACTIVE
+[2023-04-13 17:41:05,171] ( 464) INFO - (617450e2) CTI event: 6658 2
+[2023-04-13 17:41:05,172] ( 632) INFO - PDS event: Conference(2 {'id': 2, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '2149', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 6, 'c3': 0, 'third': '6658', 'ckind': 0, 'c1': 7695201, 'c2': 7695200, 'called': ''}, 'cnsq': 8, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041317405801', 'cnid': '3155006973', 'this': '6658', 'fname': 'event'})
+[2023-04-13 17:41:06,382] ( 464) INFO - (617450e2) CTI event: 6658 253
+[2023-04-13 17:41:06,382] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 17:41:06,382] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;play', 'tag': 0, 'ftime': '2023041317405901', 'cnid': '', 'confirm': 1, 'this': '6658', 'fname': 'event'})
+[2023-04-13 17:41:06,383] ( 883) INFO - [5e194757] 재생 play
+[2023-04-13 17:41:06,383] ( 884) INFO - [5e194757] send_info() with sip call-id(c4e3b303-5479-123c-9d99-6cfe544cca64) 재생
+[2023-04-13 17:42:33,225] ( 590) INFO - [c63b09f8] park() uuid: c63b09f8, ani: 2218, dnis: 6659, sip_call_id: b56a4a68-15015c66-13c4-55013-2d3856d-573dd57a-2d3856d, code: direct-center, direction: outbound, callstate: RINGING, call_uuid: c63b09f8
+[2023-04-13 17:42:33,225] ( 596) INFO - item: <class 'dict'> {'EXT_DN': '6659', 'AGENT_ID': '70059', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-04-13 17:42:33,253] ( 790) INFO - [c63b09f8] callstate: EARLY
+[2023-04-13 17:42:33,256] ( 657) INFO - [c63b09f8] answer() uuid: c63b09f8, ani: 2218, dnis: 6659, sip_call_id: b56a4a68-15015c66-13c4-55013-2d3856d-573dd57a-2d3856d, code: direct-center, direction: outbound, callstate: EARLY, call_uuid: c63b09f8
+[2023-04-13 17:42:33,257] ( 790) INFO - [c63b09f8] callstate: ACTIVE
+[2023-04-13 17:42:33,416] ( 464) INFO - (617450e2) CTI event: 6659 4
+[2023-04-13 17:42:33,416] ( 627) INFO - PDS event: Delivered(4 {'id': 4, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '6070', 'cause': 62402580, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '6070', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6659', 'ckind': 0, 'c1': 7695216, 'c2': 0, 'called': '6070'}, 'cnsq': 3, 'msid': 1, 'attach': {'uei': 'bot;01229730230413170002;1;11;02;20230404145011000008;청약녹취Ⅰ', 'ci': None}, 'tag': 0, 'ftime': '2023041317422601', 'cnid': '3155006883', 'this': '6659', 'fname': 'event'})
+[2023-04-13 17:42:33,416] ( 682) INFO - DONE to create record_key: 02023041366597695216
+[2023-04-13 17:42:33,422] ( 690) INFO - [c63b09f8] ##### bridge execute #####, sofia/gateway/Kakao/6659 CD202304131742266659|direct1|01229730230413170002|1|11|02|20230404145011000008|청약녹취Ⅰ|||02023041366597695216|
+[2023-04-13 17:42:33,425] ( 464) INFO - (617450e2) CTI event: 6659 6
+[2023-04-13 17:42:33,426] ( 630) INFO - PDS event: Established(6 {'id': 6, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '2218', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6659', 'ckind': 0, 'c1': 7695216, 'c2': 0, 'called': '6070'}, 'cnsq': 4, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041317422601', 'cnid': '3155006883', 'this': '6659', 'fname': 'event'})
+[2023-04-13 17:42:33,455] ( 790) INFO - [c63b09f8] callstate: RING_WAIT
+[2023-04-13 17:42:33,458] ( 716) INFO - [cc020c5c] originate() uuid: cc020c5c, ani: 2218, dnis: 6659, sip_call_id: None, code: direct-center, direction: outbound, callstate: DOWN, call_uuid: c63b09f8
+[2023-04-13 17:42:33,458] ( 728) INFO - call created for session 'c63b09f8-d8dd-4623-a423-f6f020f2f0a4'
+[2023-04-13 17:42:33,472] ( 652) INFO - [cc020c5c] associate session cc020c5c-353c-4143-b66a-54c62f26d576 with a call c63b09f8-d8dd-4623-a423-f6f020f2f0a4
+[2023-04-13 17:42:33,473] ( 790) INFO - [cc020c5c] callstate: ACTIVE
+[2023-04-13 17:42:33,473] ( 790) INFO - [c63b09f8] callstate: ACTIVE
+[2023-04-13 17:42:33,658] ( 464) INFO - (617450e2) CTI event: 6659 2
+[2023-04-13 17:42:33,658] ( 632) INFO - PDS event: Conference(2 {'id': 2, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '2218', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 6, 'c3': 0, 'third': '6659', 'ckind': 0, 'c1': 7695217, 'c2': 7695216, 'called': ''}, 'cnsq': 8, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041317422701', 'cnid': '3155006883', 'this': '6659', 'fname': 'event'})
+[2023-04-13 17:42:34,969] ( 464) INFO - (617450e2) CTI event: 6659 253
+[2023-04-13 17:42:34,969] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 17:42:34,970] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;play', 'tag': 0, 'ftime': '2023041317422801', 'cnid': '', 'confirm': 1, 'this': '6659', 'fname': 'event'})
+[2023-04-13 17:42:34,970] ( 883) INFO - [c63b09f8] 재생 play
+[2023-04-13 17:42:34,970] ( 884) INFO - [c63b09f8] send_info() with sip call-id(f9a060ec-5479-123c-9d99-6cfe544cca64) 재생
+[2023-04-13 17:50:03,825] ( 790) INFO - [684bca70] callstate: HANGUP
+[2023-04-13 17:50:03,827] ( 756) INFO - [684bca70] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 17:50:03,832] ( 799) INFO - [684bca70] destroy() uuid: 684bca70, ani: 2149, dnis: 6658, sip_call_id: c4e3b303-5479-123c-9d99-6cfe544cca64, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: 5e194757
+[2023-04-13 17:50:03,832] ( 801) INFO - call: <Call(5e194757-97b5-4cff-9594-ce0457c130b7, 1 sessions)>
+[2023-04-13 17:50:03,832] ( 803) INFO - hungup outbound session '684bca70-04c1-4abf-9695-3d69322ebd5b' for call '5e194757-97b5-4cff-9594-ce0457c130b7'
+[2023-04-13 17:50:03,832] ( 816) INFO - all sessions for call '5e194757-97b5-4cff-9594-ce0457c130b7' were hung up
+[2023-04-13 17:50:03,832] ( 829) INFO - length - calls: 1, sessions: 3
+[2023-04-13 17:50:03,835] ( 790) INFO - [5e194757] callstate: HANGUP
+[2023-04-13 17:50:03,835] ( 761) INFO - vendor_data: ['CD202304131740586658', 'direct1', '01124943230413170005', '1', '11', '02', '20230228024062', '청약녹취Ⅰ', '', '', '02023041366587695200', '']
+[2023-04-13 17:50:03,836] ( 778) INFO - [5e194757] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 17:50:03,836] ( 779) INFO - [5e194757] Call Detail Record: {'CALL_ID': 'CD202304131740586658', 'START_TIME': '2023-04-13 17:41:04', 'END_TIME': '2023-04-13 17:50:03', 'SIP_USER': '6658', 'CALL_LIST_ID': 0, 'CAMPAIGN_ID': 40, 'IS_PLNO': '01124943230413170005', 'BOT_DIAL_RESULT': '16', 'BOT_RESULT_CAUSE': 'NORMAL_CLEARING'}
+[2023-04-13 17:50:03,836] ( 799) INFO - [5e194757] destroy() uuid: 5e194757, ani: 2149, dnis: 6658, sip_call_id: b569a6c8-15015c66-13c4-55013-2d38515-6b2285d5-2d38515, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: 5e194757
+[2023-04-13 17:50:03,837] ( 828) INFO - no call found for '5e194757-97b5-4cff-9594-ce0457c130b7'
+[2023-04-13 17:50:03,837] ( 829) INFO - length - calls: 1, sessions: 2
+[2023-04-13 17:50:03,986] ( 464) INFO - (617450e2) CTI event: 6658 3
+[2023-04-13 17:50:04,067] ( 464) INFO - (617450e2) CTI event: 6658 253
+[2023-04-13 17:50:48,470] ( 790) INFO - [cc020c5c] callstate: HANGUP
+[2023-04-13 17:50:48,475] ( 756) INFO - [cc020c5c] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 17:50:48,479] ( 799) INFO - [cc020c5c] destroy() uuid: cc020c5c, ani: 2218, dnis: 6659, sip_call_id: f9a060ec-5479-123c-9d99-6cfe544cca64, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: c63b09f8
+[2023-04-13 17:50:48,480] ( 801) INFO - call: <Call(c63b09f8-d8dd-4623-a423-f6f020f2f0a4, 1 sessions)>
+[2023-04-13 17:50:48,480] ( 803) INFO - hungup outbound session 'cc020c5c-353c-4143-b66a-54c62f26d576' for call 'c63b09f8-d8dd-4623-a423-f6f020f2f0a4'
+[2023-04-13 17:50:48,480] ( 816) INFO - all sessions for call 'c63b09f8-d8dd-4623-a423-f6f020f2f0a4' were hung up
+[2023-04-13 17:50:48,480] ( 829) INFO - length - calls: 0, sessions: 1
+[2023-04-13 17:50:48,481] ( 790) INFO - [c63b09f8] callstate: HANGUP
+[2023-04-13 17:50:48,482] ( 761) INFO - vendor_data: ['CD202304131742266659', 'direct1', '01229730230413170002', '1', '11', '02', '20230404145011000008', '청약녹취Ⅰ', '', '', '02023041366597695216', '']
+[2023-04-13 17:50:48,482] ( 778) INFO - [c63b09f8] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 17:50:48,482] ( 779) INFO - [c63b09f8] Call Detail Record: {'CALL_ID': 'CD202304131742266659', 'START_TIME': '2023-04-13 17:42:33', 'END_TIME': '2023-04-13 17:50:48', 'SIP_USER': '6659', 'CALL_LIST_ID': 0, 'CAMPAIGN_ID': 40, 'IS_PLNO': '01229730230413170002', 'BOT_DIAL_RESULT': '16', 'BOT_RESULT_CAUSE': 'NORMAL_CLEARING'}
+[2023-04-13 17:50:48,483] ( 799) INFO - [c63b09f8] destroy() uuid: c63b09f8, ani: 2218, dnis: 6659, sip_call_id: b56a4a68-15015c66-13c4-55013-2d3856d-573dd57a-2d3856d, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: c63b09f8
+[2023-04-13 17:50:48,483] ( 828) INFO - no call found for 'c63b09f8-d8dd-4623-a423-f6f020f2f0a4'
+[2023-04-13 17:50:48,483] ( 829) INFO - length - calls: 0, sessions: 0
+[2023-04-13 17:50:48,616] ( 464) INFO - (617450e2) CTI event: 6659 3
+[2023-04-13 17:50:48,666] ( 464) INFO - (617450e2) CTI event: 6659 253
+[2023-04-13 18:10:04,667] ( 590) INFO - [18a01071] park() uuid: 18a01071, ani: 2032, dnis: 6660, sip_call_id: b431f508-15015c66-13c4-55013-2d38be1-3b66f58e-2d38be1, code: direct-center, direction: outbound, callstate: RINGING, call_uuid: 18a01071
+[2023-04-13 18:10:04,668] ( 596) INFO - item: <class 'dict'> {'EXT_DN': '6660', 'AGENT_ID': '70060', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-04-13 18:10:04,696] ( 790) INFO - [18a01071] callstate: EARLY
+[2023-04-13 18:10:04,699] ( 657) INFO - [18a01071] answer() uuid: 18a01071, ani: 2032, dnis: 6660, sip_call_id: b431f508-15015c66-13c4-55013-2d38be1-3b66f58e-2d38be1, code: direct-center, direction: outbound, callstate: EARLY, call_uuid: 18a01071
+[2023-04-13 18:10:04,700] ( 790) INFO - [18a01071] callstate: ACTIVE
+[2023-04-13 18:10:04,812] ( 464) INFO - (617450e2) CTI event: 6660 4
+[2023-04-13 18:10:04,813] ( 627) INFO - PDS event: Delivered(4 {'id': 4, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '6070', 'cause': 62402580, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '6070', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6660', 'ckind': 0, 'c1': 7695434, 'c2': 0, 'called': '6070'}, 'cnsq': 3, 'msid': 1, 'attach': {'uei': 'bot;01533661230413170004;1;11;02;20230131000582;청약녹취Ⅰ', 'ci': None}, 'tag': 0, 'ftime': '2023041318095801', 'cnid': '3155007080', 'this': '6660', 'fname': 'event'})
+[2023-04-13 18:10:04,813] ( 682) INFO - DONE to create record_key: 02023041366607695434
+[2023-04-13 18:10:04,818] ( 690) INFO - [18a01071] ##### bridge execute #####, sofia/gateway/Kakao/6660 CD202304131809586660|direct1|01533661230413170004|1|11|02|20230131000582|청약녹취Ⅰ|||02023041366607695434|
+[2023-04-13 18:10:04,821] ( 464) INFO - (617450e2) CTI event: 6660 6
+[2023-04-13 18:10:04,822] ( 630) INFO - PDS event: Established(6 {'id': 6, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '2032', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6660', 'ckind': 0, 'c1': 7695434, 'c2': 0, 'called': '6070'}, 'cnsq': 4, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041318095801', 'cnid': '3155007080', 'this': '6660', 'fname': 'event'})
+[2023-04-13 18:10:04,852] ( 790) INFO - [18a01071] callstate: RING_WAIT
+[2023-04-13 18:10:04,853] ( 716) INFO - [4c521ac8] originate() uuid: 4c521ac8, ani: 2032, dnis: 6660, sip_call_id: None, code: direct-center, direction: outbound, callstate: DOWN, call_uuid: 18a01071
+[2023-04-13 18:10:04,853] ( 728) INFO - call created for session '18a01071-7219-427e-b4c4-dd07da6b158b'
+[2023-04-13 18:10:04,891] ( 652) INFO - [4c521ac8] associate session 4c521ac8-8d83-48da-bcba-4984da7ee1ed with a call 18a01071-7219-427e-b4c4-dd07da6b158b
+[2023-04-13 18:10:04,892] ( 790) INFO - [4c521ac8] callstate: ACTIVE
+[2023-04-13 18:10:04,905] ( 790) INFO - [18a01071] callstate: ACTIVE
+[2023-04-13 18:10:05,216] ( 464) INFO - (617450e2) CTI event: 6660 2
+[2023-04-13 18:10:05,216] ( 632) INFO - PDS event: Conference(2 {'id': 2, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '2032', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 6, 'c3': 0, 'third': '6660', 'ckind': 0, 'c1': 7695435, 'c2': 7695434, 'called': ''}, 'cnsq': 8, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041318095801', 'cnid': '3155007080', 'this': '6660', 'fname': 'event'})
+[2023-04-13 18:10:05,286] ( 464) INFO - (617450e2) CTI event: 6660 253
+[2023-04-13 18:10:05,287] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 18:10:05,287] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;play', 'tag': 0, 'ftime': '2023041318095801', 'cnid': '', 'confirm': 1, 'this': '6660', 'fname': 'event'})
+[2023-04-13 18:10:05,287] ( 883) INFO - [18a01071] 재생 play
+[2023-04-13 18:10:05,287] ( 884) INFO - [18a01071] send_info() with sip call-id(d1f14b6a-547d-123c-9d99-6cfe544cca64) 재생
+[2023-04-13 18:11:20,146] ( 790) INFO - [4c521ac8] callstate: HANGUP
+[2023-04-13 18:11:20,152] ( 756) INFO - [4c521ac8] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 18:11:20,154] ( 799) INFO - [4c521ac8] destroy() uuid: 4c521ac8, ani: 2032, dnis: 6660, sip_call_id: d1f14b6a-547d-123c-9d99-6cfe544cca64, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: 18a01071
+[2023-04-13 18:11:20,155] ( 801) INFO - call: <Call(18a01071-7219-427e-b4c4-dd07da6b158b, 1 sessions)>
+[2023-04-13 18:11:20,155] ( 803) INFO - hungup outbound session '4c521ac8-8d83-48da-bcba-4984da7ee1ed' for call '18a01071-7219-427e-b4c4-dd07da6b158b'
+[2023-04-13 18:11:20,155] ( 816) INFO - all sessions for call '18a01071-7219-427e-b4c4-dd07da6b158b' were hung up
+[2023-04-13 18:11:20,155] ( 829) INFO - length - calls: 0, sessions: 1
+[2023-04-13 18:11:20,156] ( 790) INFO - [18a01071] callstate: HANGUP
+[2023-04-13 18:11:20,158] ( 761) INFO - vendor_data: ['CD202304131809586660', 'direct1', '01533661230413170004', '1', '11', '02', '20230131000582', '청약녹취Ⅰ', '', '', '02023041366607695434', '']
+[2023-04-13 18:11:20,158] ( 778) INFO - [18a01071] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 18:11:20,158] ( 779) INFO - [18a01071] Call Detail Record: {'CALL_ID': 'CD202304131809586660', 'START_TIME': '2023-04-13 18:10:04', 'END_TIME': '2023-04-13 18:11:20', 'SIP_USER': '6660', 'CALL_LIST_ID': 0, 'CAMPAIGN_ID': 40, 'IS_PLNO': '01533661230413170004', 'BOT_DIAL_RESULT': '16', 'BOT_RESULT_CAUSE': 'NORMAL_CLEARING'}
+[2023-04-13 18:11:20,159] ( 799) INFO - [18a01071] destroy() uuid: 18a01071, ani: 2032, dnis: 6660, sip_call_id: b431f508-15015c66-13c4-55013-2d38be1-3b66f58e-2d38be1, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: 18a01071
+[2023-04-13 18:11:20,159] ( 828) INFO - no call found for '18a01071-7219-427e-b4c4-dd07da6b158b'
+[2023-04-13 18:11:20,159] ( 829) INFO - length - calls: 0, sessions: 0
+[2023-04-13 18:11:20,205] ( 464) INFO - (617450e2) CTI event: 6660 3
+[2023-04-13 18:11:20,215] ( 464) INFO - (617450e2) CTI event: 6660 253
+[2023-04-13 18:45:48,056] ( 590) INFO - [3b77849f] park() uuid: 3b77849f, ani: 2172, dnis: 6661, sip_call_id: b56dba28-15015c66-13c4-55013-2d39440-4131b3f2-2d39440, code: direct-center, direction: outbound, callstate: RINGING, call_uuid: 3b77849f
+[2023-04-13 18:45:48,057] ( 596) INFO - item: <class 'dict'> {'EXT_DN': '6661', 'AGENT_ID': '70061', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-04-13 18:45:48,085] ( 790) INFO - [3b77849f] callstate: EARLY
+[2023-04-13 18:45:48,088] ( 657) INFO - [3b77849f] answer() uuid: 3b77849f, ani: 2172, dnis: 6661, sip_call_id: b56dba28-15015c66-13c4-55013-2d39440-4131b3f2-2d39440, code: direct-center, direction: outbound, callstate: EARLY, call_uuid: 3b77849f
+[2023-04-13 18:45:48,089] ( 790) INFO - [3b77849f] callstate: ACTIVE
+[2023-04-13 18:45:48,178] ( 464) INFO - (617450e2) CTI event: 6661 4
+[2023-04-13 18:45:48,178] ( 627) INFO - PDS event: Delivered(4 {'id': 4, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '6070', 'cause': 62402580, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '6070', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6661', 'ckind': 0, 'c1': 7695546, 'c2': 0, 'called': '6070'}, 'cnsq': 3, 'msid': 1, 'attach': {'uei': 'bot;00960007230413180003;1;11;02;20230307150454000004;청약녹취Ⅰ', 'ci': None}, 'tag': 0, 'ftime': '2023041318454101', 'cnid': '3155007299', 'this': '6661', 'fname': 'event'})
+[2023-04-13 18:45:48,179] ( 682) INFO - DONE to create record_key: 02023041366617695546
+[2023-04-13 18:45:48,184] ( 690) INFO - [3b77849f] ##### bridge execute #####, sofia/gateway/Kakao/6661 CD202304131845416661|direct1|00960007230413180003|1|11|02|20230307150454000004|청약녹취Ⅰ|||02023041366617695546|
+[2023-04-13 18:45:48,187] ( 464) INFO - (617450e2) CTI event: 6661 6
+[2023-04-13 18:45:48,188] ( 630) INFO - PDS event: Established(6 {'id': 6, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '2172', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6661', 'ckind': 0, 'c1': 7695546, 'c2': 0, 'called': '6070'}, 'cnsq': 4, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041318454101', 'cnid': '3155007299', 'this': '6661', 'fname': 'event'})
+[2023-04-13 18:45:48,218] ( 790) INFO - [3b77849f] callstate: RING_WAIT
+[2023-04-13 18:45:48,219] ( 716) INFO - [6770491c] originate() uuid: 6770491c, ani: 2172, dnis: 6661, sip_call_id: None, code: direct-center, direction: outbound, callstate: DOWN, call_uuid: 3b77849f
+[2023-04-13 18:45:48,220] ( 728) INFO - call created for session '3b77849f-a876-40ca-b332-01881fdd0df0'
+[2023-04-13 18:45:48,257] ( 652) INFO - [6770491c] associate session 6770491c-a8b6-4f01-ae17-8f9ae248611a with a call 3b77849f-a876-40ca-b332-01881fdd0df0
+[2023-04-13 18:45:48,258] ( 790) INFO - [6770491c] callstate: ACTIVE
+[2023-04-13 18:45:48,259] ( 790) INFO - [3b77849f] callstate: ACTIVE
+[2023-04-13 18:45:48,420] ( 464) INFO - (617450e2) CTI event: 6661 2
+[2023-04-13 18:45:48,421] ( 632) INFO - PDS event: Conference(2 {'id': 2, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '2172', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 6, 'c3': 0, 'third': '6661', 'ckind': 0, 'c1': 7695547, 'c2': 7695546, 'called': ''}, 'cnsq': 8, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041318454101', 'cnid': '3155007299', 'this': '6661', 'fname': 'event'})
+[2023-04-13 18:45:58,273] ( 464) INFO - (617450e2) CTI event: 6661 253
+[2023-04-13 18:45:58,274] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 18:45:58,274] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;play', 'tag': 0, 'ftime': '2023041318455101', 'cnid': '', 'confirm': 1, 'this': '6661', 'fname': 'event'})
+[2023-04-13 18:45:58,274] ( 883) INFO - [3b77849f] 재생 play
+[2023-04-13 18:45:58,274] ( 884) INFO - [3b77849f] send_info() with sip call-id(cf7b480c-5482-123c-9d99-6cfe544cca64) 재생
+[2023-04-13 18:46:44,796] ( 464) INFO - (617450e2) CTI event: 6661 253
+[2023-04-13 18:46:44,796] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 18:46:44,796] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;pause', 'tag': 0, 'ftime': '2023041318463801', 'cnid': '', 'confirm': 1, 'this': '6661', 'fname': 'event'})
+[2023-04-13 18:46:44,796] ( 883) INFO - [3b77849f] 일시정지 pause
+[2023-04-13 18:46:44,797] ( 884) INFO - [3b77849f] send_info() with sip call-id(cf7b480c-5482-123c-9d99-6cfe544cca64) 일시정지
+[2023-04-13 18:46:58,479] ( 464) INFO - (617450e2) CTI event: 6661 253
+[2023-04-13 18:46:58,479] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 18:46:58,479] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;play', 'tag': 0, 'ftime': '2023041318465201', 'cnid': '', 'confirm': 1, 'this': '6661', 'fname': 'event'})
+[2023-04-13 18:46:58,480] ( 883) INFO - [3b77849f] 재생 play
+[2023-04-13 18:46:58,480] ( 884) INFO - [3b77849f] send_info() with sip call-id(cf7b480c-5482-123c-9d99-6cfe544cca64) 재생
+[2023-04-13 18:47:05,652] ( 464) INFO - (617450e2) CTI event: 6661 253
+[2023-04-13 18:47:05,652] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 18:47:05,652] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;pause', 'tag': 0, 'ftime': '2023041318465901', 'cnid': '', 'confirm': 1, 'this': '6661', 'fname': 'event'})
+[2023-04-13 18:47:05,653] ( 883) INFO - [3b77849f] 일시정지 pause
+[2023-04-13 18:47:05,653] ( 884) INFO - [3b77849f] send_info() with sip call-id(cf7b480c-5482-123c-9d99-6cfe544cca64) 일시정지
+[2023-04-13 18:47:14,711] ( 464) INFO - (617450e2) CTI event: 6661 253
+[2023-04-13 18:47:14,711] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 18:47:14,711] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;play', 'tag': 0, 'ftime': '2023041318470801', 'cnid': '', 'confirm': 1, 'this': '6661', 'fname': 'event'})
+[2023-04-13 18:47:14,712] ( 883) INFO - [3b77849f] 재생 play
+[2023-04-13 18:47:14,712] ( 884) INFO - [3b77849f] send_info() with sip call-id(cf7b480c-5482-123c-9d99-6cfe544cca64) 재생
+[2023-04-13 18:47:22,075] ( 464) INFO - (617450e2) CTI event: 6661 253
+[2023-04-13 18:47:22,076] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 18:47:22,076] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;pause', 'tag': 0, 'ftime': '2023041318471501', 'cnid': '', 'confirm': 1, 'this': '6661', 'fname': 'event'})
+[2023-04-13 18:47:22,076] ( 883) INFO - [3b77849f] 일시정지 pause
+[2023-04-13 18:47:22,076] ( 884) INFO - [3b77849f] send_info() with sip call-id(cf7b480c-5482-123c-9d99-6cfe544cca64) 일시정지
+[2023-04-13 18:47:25,431] ( 464) INFO - (617450e2) CTI event: 6661 253
+[2023-04-13 18:47:25,432] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 18:47:25,432] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;play', 'tag': 0, 'ftime': '2023041318471801', 'cnid': '', 'confirm': 1, 'this': '6661', 'fname': 'event'})
+[2023-04-13 18:47:25,432] ( 883) INFO - [3b77849f] 재생 play
+[2023-04-13 18:47:25,432] ( 884) INFO - [3b77849f] send_info() with sip call-id(cf7b480c-5482-123c-9d99-6cfe544cca64) 재생
+[2023-04-13 18:56:15,973] ( 790) INFO - [6770491c] callstate: HANGUP
+[2023-04-13 18:56:15,980] ( 756) INFO - [6770491c] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 18:56:15,984] ( 799) INFO - [6770491c] destroy() uuid: 6770491c, ani: 2172, dnis: 6661, sip_call_id: cf7b480c-5482-123c-9d99-6cfe544cca64, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: 3b77849f
+[2023-04-13 18:56:15,984] ( 801) INFO - call: <Call(3b77849f-a876-40ca-b332-01881fdd0df0, 1 sessions)>
+[2023-04-13 18:56:15,984] ( 803) INFO - hungup outbound session '6770491c-a8b6-4f01-ae17-8f9ae248611a' for call '3b77849f-a876-40ca-b332-01881fdd0df0'
+[2023-04-13 18:56:15,984] ( 816) INFO - all sessions for call '3b77849f-a876-40ca-b332-01881fdd0df0' were hung up
+[2023-04-13 18:56:15,984] ( 829) INFO - length - calls: 0, sessions: 1
+[2023-04-13 18:56:15,985] ( 790) INFO - [3b77849f] callstate: HANGUP
+[2023-04-13 18:56:15,986] ( 761) INFO - vendor_data: ['CD202304131845416661', 'direct1', '00960007230413180003', '1', '11', '02', '20230307150454000004', '청약녹취Ⅰ', '', '', '02023041366617695546', '']
+[2023-04-13 18:56:15,986] ( 778) INFO - [3b77849f] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 18:56:15,986] ( 779) INFO - [3b77849f] Call Detail Record: {'CALL_ID': 'CD202304131845416661', 'START_TIME': '2023-04-13 18:45:48', 'END_TIME': '2023-04-13 18:56:15', 'SIP_USER': '6661', 'CALL_LIST_ID': 0, 'CAMPAIGN_ID': 40, 'IS_PLNO': '00960007230413180003', 'BOT_DIAL_RESULT': '16', 'BOT_RESULT_CAUSE': 'NORMAL_CLEARING'}
+[2023-04-13 18:56:15,987] ( 799) INFO - [3b77849f] destroy() uuid: 3b77849f, ani: 2172, dnis: 6661, sip_call_id: b56dba28-15015c66-13c4-55013-2d39440-4131b3f2-2d39440, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: 3b77849f
+[2023-04-13 18:56:15,987] ( 828) INFO - no call found for '3b77849f-a876-40ca-b332-01881fdd0df0'
+[2023-04-13 18:56:15,987] ( 829) INFO - length - calls: 0, sessions: 0
+[2023-04-13 18:56:16,134] ( 464) INFO - (617450e2) CTI event: 6661 3
+[2023-04-13 18:56:16,195] ( 464) INFO - (617450e2) CTI event: 6661 253
+[2023-04-13 19:00:54,215] ( 354) INFO - (72d83a35) event: 6670 202
+[2023-04-13 19:00:54,216] ( 370) INFO - PDS event: Logout(202)
+[2023-04-13 19:00:54,216] ( 373) INFO - PDS logon: {"fname": "logon", "this": "6670", "agent": {"id": "70070", "group": "400", "channel": "0", "wmode": "1"}}
+[2023-04-13 19:00:54,416] ( 354) INFO - (72d83a35) event: 6670 201
+[2023-04-13 19:00:54,461] ( 354) INFO - (72d83a35) event: 6670 204
+[2023-04-13 19:00:54,461] ( 384) INFO - >>> logon: {'result': 1, 'agent': {'id': '70070', 'group': '400', 'channel': '0', 'wmode': '1'}, 'this': '6670', 'fname': 'logon'}
+[2023-04-13 19:43:35,642] ( 590) INFO - [9fad608b] park() uuid: 9fad608b, ani: 2032, dnis: 6662, sip_call_id: b55d5548-15015c66-13c4-55013-2d3a1cc-65748be5-2d3a1cc, code: direct-center, direction: outbound, callstate: RINGING, call_uuid: 9fad608b
+[2023-04-13 19:43:35,642] ( 596) INFO - item: <class 'dict'> {'EXT_DN': '6662', 'AGENT_ID': '70062', 'SVC_ID': 'direct1', 'CAMP_ID': '40', 'SERVICE': '청약'}
+[2023-04-13 19:43:35,670] ( 790) INFO - [9fad608b] callstate: EARLY
+[2023-04-13 19:43:35,696] ( 657) INFO - [9fad608b] answer() uuid: 9fad608b, ani: 2032, dnis: 6662, sip_call_id: b55d5548-15015c66-13c4-55013-2d3a1cc-65748be5-2d3a1cc, code: direct-center, direction: outbound, callstate: EARLY, call_uuid: 9fad608b
+[2023-04-13 19:43:35,697] ( 790) INFO - [9fad608b] callstate: ACTIVE
+[2023-04-13 19:43:35,761] ( 464) INFO - (617450e2) CTI event: 6662 4
+[2023-04-13 19:43:35,761] ( 627) INFO - PDS event: Delivered(4 {'id': 4, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '6070', 'cause': 62402580, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '6070', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6662', 'ckind': 0, 'c1': 7695568, 'c2': 0, 'called': '6070'}, 'cnsq': 3, 'msid': 1, 'attach': {'uei': 'bot;01533661230413190001;1;11;02;20230331016644;청약녹취Ⅰ', 'ci': None}, 'tag': 0, 'ftime': '2023041319432901', 'cnid': '3155007316', 'this': '6662', 'fname': 'event'})
+[2023-04-13 19:43:35,761] ( 682) INFO - DONE to create record_key: 02023041366627695568
+[2023-04-13 19:43:35,766] ( 690) INFO - [9fad608b] ##### bridge execute #####, sofia/gateway/Kakao/6662 CD202304131943296662|direct1|01533661230413190001|1|11|02|20230331016644|청약녹취Ⅰ|||02023041366627695568|
+[2023-04-13 19:43:35,771] ( 464) INFO - (617450e2) CTI event: 6662 6
+[2023-04-13 19:43:35,771] ( 630) INFO - PDS event: Established(6 {'id': 6, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '2032', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 4, 'c3': 0, 'third': '6662', 'ckind': 0, 'c1': 7695568, 'c2': 0, 'called': '6070'}, 'cnsq': 4, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041319432901', 'cnid': '3155007316', 'this': '6662', 'fname': 'event'})
+[2023-04-13 19:43:35,800] ( 790) INFO - [9fad608b] callstate: RING_WAIT
+[2023-04-13 19:43:35,802] ( 716) INFO - [f4b0427e] originate() uuid: f4b0427e, ani: 2032, dnis: 6662, sip_call_id: None, code: direct-center, direction: outbound, callstate: DOWN, call_uuid: 9fad608b
+[2023-04-13 19:43:35,802] ( 728) INFO - call created for session '9fad608b-ba84-42f8-977b-2f4db75b8c35'
+[2023-04-13 19:43:35,840] ( 652) INFO - [f4b0427e] associate session f4b0427e-a01a-4d6d-840e-1b608ce67ee4 with a call 9fad608b-ba84-42f8-977b-2f4db75b8c35
+[2023-04-13 19:43:35,840] ( 790) INFO - [f4b0427e] callstate: ACTIVE
+[2023-04-13 19:43:35,854] ( 790) INFO - [9fad608b] callstate: ACTIVE
+[2023-04-13 19:43:36,003] ( 464) INFO - (617450e2) CTI event: 6662 2
+[2023-04-13 19:43:36,003] ( 632) INFO - PDS event: Conference(2 {'id': 2, 'queue': {'wqueue': 0, 'wtime': 0, 'dn': ''}, 'call': {'other': '2032', 'cause': 0, 'uui': '', 'connlist2': '', 'connlist3': '', 'origin': '', 'connlist1': '', 'ctype': 6, 'c3': 0, 'third': '6662', 'ckind': 0, 'c1': 7695569, 'c2': 7695568, 'called': ''}, 'cnsq': 8, 'msid': 1, 'attach': {'uei': None, 'ci': None}, 'tag': 0, 'ftime': '2023041319432901', 'cnid': '3155007316', 'this': '6662', 'fname': 'event'})
+[2023-04-13 19:43:36,698] ( 464) INFO - (617450e2) CTI event: 6662 253
+[2023-04-13 19:43:36,698] ( 635) INFO - PDS event: PwdConfirm(253)
+[2023-04-13 19:43:36,698] ( 636) INFO - PDS event: PwdConfirm({'id': 253, 'cnsq': 0, 'msid': 0, 'attach': 'bot;play', 'tag': 0, 'ftime': '2023041319433001', 'cnid': '', 'confirm': 1, 'this': '6662', 'fname': 'event'})
+[2023-04-13 19:43:36,698] ( 883) INFO - [9fad608b] 재생 play
+[2023-04-13 19:43:36,698] ( 884) INFO - [9fad608b] send_info() with sip call-id(e2547655-548a-123c-9d99-6cfe544cca64) 재생
+[2023-04-13 19:54:32,635] ( 790) INFO - [f4b0427e] callstate: HANGUP
+[2023-04-13 19:54:32,637] ( 756) INFO - [f4b0427e] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 19:54:32,641] ( 799) INFO - [f4b0427e] destroy() uuid: f4b0427e, ani: 2032, dnis: 6662, sip_call_id: e2547655-548a-123c-9d99-6cfe544cca64, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: 9fad608b
+[2023-04-13 19:54:32,641] ( 801) INFO - call: <Call(9fad608b-ba84-42f8-977b-2f4db75b8c35, 1 sessions)>
+[2023-04-13 19:54:32,641] ( 803) INFO - hungup outbound session 'f4b0427e-a01a-4d6d-840e-1b608ce67ee4' for call '9fad608b-ba84-42f8-977b-2f4db75b8c35'
+[2023-04-13 19:54:32,641] ( 816) INFO - all sessions for call '9fad608b-ba84-42f8-977b-2f4db75b8c35' were hung up
+[2023-04-13 19:54:32,641] ( 829) INFO - length - calls: 0, sessions: 1
+[2023-04-13 19:54:32,645] ( 790) INFO - [9fad608b] callstate: HANGUP
+[2023-04-13 19:54:32,647] ( 761) INFO - vendor_data: ['CD202304131943296662', 'direct1', '01533661230413190001', '1', '11', '02', '20230331016644', '청약녹취Ⅰ', '', '', '02023041366627695568', '']
+[2023-04-13 19:54:32,647] ( 778) INFO - [9fad608b] hangup cause: NORMAL_CLEARING, code: 16, status: None
+[2023-04-13 19:54:32,647] ( 779) INFO - [9fad608b] Call Detail Record: {'CALL_ID': 'CD202304131943296662', 'START_TIME': '2023-04-13 19:43:35', 'END_TIME': '2023-04-13 19:54:32', 'SIP_USER': '6662', 'CALL_LIST_ID': 0, 'CAMPAIGN_ID': 40, 'IS_PLNO': '01533661230413190001', 'BOT_DIAL_RESULT': '16', 'BOT_RESULT_CAUSE': 'NORMAL_CLEARING'}
+[2023-04-13 19:54:32,648] ( 799) INFO - [9fad608b] destroy() uuid: 9fad608b, ani: 2032, dnis: 6662, sip_call_id: b55d5548-15015c66-13c4-55013-2d3a1cc-65748be5-2d3a1cc, code: direct-center, direction: outbound, callstate: HANGUP, call_uuid: 9fad608b
+[2023-04-13 19:54:32,648] ( 828) INFO - no call found for '9fad608b-ba84-42f8-977b-2f4db75b8c35'
+[2023-04-13 19:54:32,648] ( 829) INFO - length - calls: 0, sessions: 0
+[2023-04-13 19:54:32,720] ( 464) INFO - (617450e2) CTI event: 6662 3
+[2023-04-13 19:54:32,781] ( 464) INFO - (617450e2) CTI event: 6662 253
