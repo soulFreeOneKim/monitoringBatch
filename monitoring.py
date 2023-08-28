@@ -236,6 +236,7 @@ for obj in log_file_object_list:
     generator.generate()
     
     detector        = Detector(generator.LOGINFO)
-    logging.info(f"[monitoring.py] detector.DF : {detector.DF}")
-    detector.errorExtractor()
+
+    detector.jobProcessingChecker(detector.DF)
+    #detector.errorExtractor(detector.DF)
     detector.loadCsv()
