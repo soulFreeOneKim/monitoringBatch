@@ -42,6 +42,7 @@ class Detector:
     def jobProcessingChecker(self, DF):
         logging.info(f"[detector.py] jobProcessingChecker start ...")
 
+        df = DF
         mode = 'w' if not is_file_created_today(f'{RESULT_DIR}/result.txt') else 'a'
 
         with open(f'{RESULT_DIR}/result.txt', mode) as file:
@@ -58,19 +59,116 @@ class Detector:
             # 로그별 체크 로직
             # ----------------------------------------------------------------------------------------------- #
             if self.LOGINFO.APP_DV_CD == "VGW" and self.LOGINFO.CENTER_DV_CD == "CALL-CENTER":
+                df_regi = df[df['DETAIL_TXT'].str.contains(">>>") & df['DETAIL_TXT'].str.contains("kyobocc_")]
+                df_regi_check = df_regi['DETAIL_TXT'].str.split("Gateway:", expand=True)[1].str.split(",",expand=True).drop_duplicates()
+                df_regi_check.columns = ['line', 'action', 'status']
+                df_regi_check = df_regi_check.sort_values(by = ['line','action']).reset_index(drop=True)
+                df_regi_check['action'] = df_regi_check['action'].str.replace(" ","")
+                df_regi_check_groupby = df_regi_check.groupby('action').count()['line']
 
+                reged_cnt       = df_regi_check_groupby.loc['REGED']
+                register_cnt    = df_regi_check_groupby.loc['REGISTER']
 
+                file.write(f"reged_cnt : {reged_cnt} , register_cnt : {register_cnt} \n") 
 
+                pattern = r"\[(\w+)\] park\(\)"
+                sr_call_park_uuid = df[df['DETAIL_TXT'].str.contains("park\(\)")]['DETAIL_TXT'].str.extract(pattern).drop_duplicates()[0]
+                park_uuid_cnt = len(sr_call_park_uuid)
+
+                pattern = r"\[(\w+)\]"
+                sr_call_bridge_uuid = df[df['DETAIL_TXT'].str.contains("bridge execute")]['DETAIL_TXT'].str.extract(pattern).drop_duplicates()[0]
+                bridge_uuid_cnt = len(sr_call_bridge_uuid)
+
+                pattern = r"\[(\w+)\]" 
+                sr_call_originate_uuid = df[df['DETAIL_TXT'].str.contains("originate\(\) uuid")]['DETAIL_TXT'].str.extract(pattern).drop_duplicates()[0]
+                originate_uuid_cnt = len(sr_call_originate_uuid)
+
+                df_outbound_uuid = df[df['DETAIL_TXT'].str.contains("Found agent")]['DETAIL_TXT'].str.split("call_uuid: ",expand=True)[1]
+                outbound_call_uuid_cnt = len(df_outbound_uuid)
+
+                sr_inbound_uuid = sr_call_park_uuid[~sr_call_park_uuid.isin(df_outbound_uuid)]
+                inbound_call_uuid_cnt = len(sr_inbound_uuid)
+
+                pattern = r"\[(\w+)\]"
+                sr_active_uuid = df[df['DETAIL_TXT'].str.contains("] callstate: ACTIVE")]['DETAIL_TXT'].str.extract(pattern).drop_duplicates()[0]
+                active_uuid_cnt = len(sr_active_uuid)
+
+                pattern = r"\[(\w+)\]"
+                sr_early_uuid = df[df['DETAIL_TXT'].str.contains("] callstate: EARLY")]['DETAIL_TXT'].str.extract(pattern).drop_duplicates()[0]
+                early_uuid_cnt = len(sr_early_uuid)
+
+                pattern = r"\[(\w+)\]"
+                sr_hangup_uuid = df[df['DETAIL_TXT'].str.contains("] callstate: HANGUP")]['DETAIL_TXT'].str.extract(pattern).drop_duplicates()[0]
+                hangup_uuid_cnt = len(sr_hangup_uuid)
+
+                pattern = r"\[(\w+)\]"
+                sr_call_destory_uuid = df[df['DETAIL_TXT'].str.contains("destroy\(\)")]['DETAIL_TXT'].str.extract(pattern).drop_duplicates()[0]
+                destroy_uuid_cnt = len(sr_call_destory_uuid)
+
+                file.write(f"park_uuid_cnt          : {park_uuid_cnt}           \n")
+                file.write(f"early_uuid_cnt         : {early_uuid_cnt}          \n")
+                file.write(f"bridge_uuid_cnt        : {bridge_uuid_cnt}         \n")
+                file.write(f"originate_uuid_cnt     : {originate_uuid_cnt}      \n")
+                file.write(f"active_uuid_cnt        : {active_uuid_cnt}         \n")
+                file.write(f"hangup_uuid_cnt        : {hangup_uuid_cnt}         \n")
+                file.write(f"destroy_uuid_cnt       : {destroy_uuid_cnt}        \n")
+                file.write(f"inbound_call_uuid_cnt  : {inbound_call_uuid_cnt}   \n")
+                file.write(f"outbound_call_uuid_cnt : {outbound_call_uuid_cnt}  \n")
+                if hangup_uuid_cnt  / 2 != park_uuid_cnt:
+                    file.write(f"[warning] hangup_uuid_cnt check \n")
+                if active_uuid_cnt  / 2 != park_uuid_cnt: 
+                    file.write(f"[warning] active_uuid_cnt check \n")
+                if destroy_uuid_cnt / 2 != park_uuid_cnt:
+                    file.write(f"[warning] destroy_uuid_cnt check \n")
                 file.write(f"[Checker End] -------------------------------------------------- \n")
+                
             elif self.LOGINFO.APP_DV_CD == "VGW" and self.LOGINFO.CENTER_DV_CD == "DIRECT-CENTER": 
 
+                pattern = r"\[(\w+)\] park\(\)"
+                sr_call_park_uuid = df[df['DETAIL_TXT'].str.contains("park\(\)")]['DETAIL_TXT'].str.extract(pattern).drop_duplicates()[0]
+                park_uuid_cnt = len(sr_call_park_uuid)
 
-                
+                pattern = r"\[(\w+)\]"
+                sr_call_bridge_uuid = df[df['DETAIL_TXT'].str.contains("bridge execute")]['DETAIL_TXT'].str.extract(pattern).drop_duplicates()[0]
+                bridge_uuid_cnt = len(sr_call_bridge_uuid)
+
+                pattern = r"\[(\w+)\]" 
+                sr_call_originate_uuid = df[df['DETAIL_TXT'].str.contains("originate\(\) uuid")]['DETAIL_TXT'].str.extract(pattern).drop_duplicates()[0]
+                originate_uuid_cnt = len(sr_call_originate_uuid)
+
+                pattern = r"\[(\w+)\]"
+                sr_active_uuid = df[df['DETAIL_TXT'].str.contains("] callstate: ACTIVE")]['DETAIL_TXT'].str.extract(pattern).drop_duplicates()[0]
+                active_uuid_cnt = len(sr_active_uuid)
+
+                pattern = r"\[(\w+)\]"
+                sr_early_uuid = df[df['DETAIL_TXT'].str.contains("] callstate: EARLY")]['DETAIL_TXT'].str.extract(pattern).drop_duplicates()[0]
+                early_uuid_cnt = len(sr_early_uuid)
+
+                pattern = r"\[(\w+)\]"
+                sr_hangup_uuid = df[df['DETAIL_TXT'].str.contains("] callstate: HANGUP")]['DETAIL_TXT'].str.extract(pattern).drop_duplicates()[0]
+                hangup_uuid_cnt = len(sr_hangup_uuid)
+
+                pattern = r"\[(\w+)\]"
+                sr_call_destory_uuid = df[df['DETAIL_TXT'].str.contains("destroy\(\)")]['DETAIL_TXT'].str.extract(pattern).drop_duplicates()[0]
+                destroy_uuid_cnt = len(sr_call_destory_uuid)
+
+                file.write(f"park_uuid_cnt          : {park_uuid_cnt}           \n")
+                file.write(f"early_uuid_cnt         : {early_uuid_cnt}          \n")
+                file.write(f"bridge_uuid_cnt        : {bridge_uuid_cnt}         \n")
+                file.write(f"active_uuid_cnt        : {active_uuid_cnt}         \n")
+                file.write(f"hangup_uuid_cnt        : {hangup_uuid_cnt}         \n")
+                file.write(f"destroy_uuid_cnt       : {destroy_uuid_cnt}        \n")
+                if hangup_uuid_cnt  / 2 != park_uuid_cnt:
+                    file.write(f"[warning] hangup_uuid_cnt check \n")
+                if active_uuid_cnt  / 2 != park_uuid_cnt: 
+                    file.write(f"[warning] active_uuid_cnt check \n")
+                if destroy_uuid_cnt / 2 != park_uuid_cnt:
+                    file.write(f"[warning] destroy_uuid_cnt check \n")
+
                 file.write(f"[Checker End] -------------------------------------------------- \n")
 
 
             elif self.LOGINFO.APP_DV_CD == "VSA" and self.LOGINFO.CENTER_DV_CD == "COMMON":
-                df = DF
                 # --- DB CONNECTION CHECK
                 df_dbconnection = df[df['DETAIL_TXT'].str.contains("HikariPool")]
                 con_failed_cnt = len(df_dbconnection[df_dbconnection['DETAIL_TXT'].str.contains("failed")])
@@ -101,7 +199,6 @@ class Detector:
 
 
             elif self.LOGINFO.APP_DV_CD == "VDT" and self.LOGINFO.CENTER_DV_CD == "COMMON": 
-                df = DF
                 # --- DB CONNECTION CHECK
                 df_dbconnection = df[df['DETAIL_TXT'].str.contains("HikariPool")]
                 con_failed_cnt = len(df_dbconnection[df_dbconnection['DETAIL_TXT'].str.contains("failed")])
@@ -131,7 +228,6 @@ class Detector:
                     file.write(f"[Checker End] -------------------------------------------------- \n")
 
             elif self.LOGINFO.APP_DV_CD == "VRS" and self.LOGINFO.CENTER_DV_CD == "COMMON": 
-                df = DF
                 # --- DB CONNECTION CHECK
                 df_dbconnection = df[df['DETAIL_TXT'].str.contains("HikariPool")]
                 con_failed_cnt = len(df_dbconnection[df_dbconnection['DETAIL_TXT'].str.contains("failed")])

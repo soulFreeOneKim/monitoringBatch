@@ -239,4 +239,4 @@ for obj in log_file_object_list:
 
     detector.jobProcessingChecker(detector.DF)
     #detector.errorExtractor(detector.DF)
-    detector.loadCsv()
+    #detector.loadCsv()
