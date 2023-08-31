@@ -1,0 +1,8 @@
+1. (개발PC) Dockerfile : image build
+2. (개발PC) SAVE : docker save -o aiccmonitoringbatch.tar aiccmonitoringbatch:latest
+3. (적용서버) LOAD : docker load -i aiccmonitoringbatch.tar 
+4. (적용서버) DOCKER RUN
+docker run -d --name aiccmonitoringbatch \
+-v /app/AiccMonitoringBatch:/app \
+-e TZ=Asia/Seoul \
+aiccmonitoringbatch:latest
